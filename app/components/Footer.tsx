@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -54,11 +55,30 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
-          <p>© {new Date().getFullYear()} Mavedda Tech. Tüm hakları saklıdır.</p>
-          <div className="flex gap-6">
-            <Link href="#" className="hover:text-white/80 transition-colors">Gizlilik Politikası</Link>
-            <Link href="#" className="hover:text-white/80 transition-colors">Kullanım Şartları</Link>
+        <div className="pt-24 flex flex-col">
+          {/* Massive Text */}
+          <div className="w-full mb-10">
+            <h2 className="text-[18vw] md:text-[14vw] leading-none font-medium tracking-tight text-white mb-4 -ml-1 md:-ml-2">
+              Mavedda
+            </h2>
+          </div>
+          
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 text-sm text-white/50">
+            <div className="flex items-center gap-4">
+              {/* Simple logo circle matching the Bending Spoons cookie/logo icon */}
+              <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-bold text-white">
+                M
+              </div>
+              <span className="italic text-[#D3EFAB]">Geleceği tasarlıyoruz.</span>
+            </div>
+            
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
+              <p>© {new Date().getFullYear()} Mavedda Tech. Tüm hakları saklıdır.</p>
+              <div className="flex gap-6">
+                <Link href="#" className="hover:text-white transition-colors">Gizlilik Politikası</Link>
+                <Link href="#" className="hover:text-white transition-colors">Kullanım Şartları</Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

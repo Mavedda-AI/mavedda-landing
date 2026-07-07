@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  weight: "400",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Mavedda | Teknoloji Üretim Üssü",
-  description: "Mobil uygulama, web platformları ve teknoloji üretim merkezi. Mavedda ile fikirlerinizi milyonlara ulaştırın.",
+  description: "Mavedda bir teknoloji üretim üssüdür. Dünya standartlarında uzmanlığımızla, fikirlerinizi milyonlara ulaşan mobil uygulamalara dönüştürüyoruz.",
 };
 
 export default function RootLayout({
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="tr"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
+      className={`${instrumentSans.variable} ${instrumentSerif.variable} antialiased bg-black text-white`}
     >
       <body className="min-h-screen flex flex-col font-sans">{children}</body>
     </html>
