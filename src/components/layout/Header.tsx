@@ -98,11 +98,11 @@ export const Header = () => {
   </g>
   <defs>
     <linearGradient id="paint0_linear_2670_6491" x1="0.5" y1="0.5" x2="60.7923" y2="7.09153" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#00C5EA"/>
-      <stop offset="0.235" stop-color="#7800FF"/>
-      <stop offset="0.51" stop-color="#DF00B4"/>
-      <stop offset="0.735" stop-color="#FF0080"/>
-      <stop offset="1" stop-color="#FF9600"/>
+      <stop stopColor="#00C5EA"/>
+      <stop offset="0.235" stopColor="#7800FF"/>
+      <stop offset="0.51" stopColor="#DF00B4"/>
+      <stop offset="0.735" stopColor="#FF0080"/>
+      <stop offset="1" stopColor="#FF9600"/>
     </linearGradient>
     <clipPath id="clip0_2670_6491">
       <rect width="56" height="56" fill="white"/>
@@ -121,11 +121,11 @@ export const Header = () => {
   </g>
   <defs>
     <linearGradient id="paint0_linear_2670_6529" x1="0.5" y1="0.5" x2="60.7923" y2="7.09153" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#00C5EA"/>
-      <stop offset="0.235" stop-color="#7800FF"/>
-      <stop offset="0.51" stop-color="#DF00B4"/>
-      <stop offset="0.735" stop-color="#FF0080"/>
-      <stop offset="1" stop-color="#FF9600"/>
+      <stop stopColor="#00C5EA"/>
+      <stop offset="0.235" stopColor="#7800FF"/>
+      <stop offset="0.51" stopColor="#DF00B4"/>
+      <stop offset="0.735" stopColor="#FF0080"/>
+      <stop offset="1" stopColor="#FF9600"/>
     </linearGradient>
     <clipPath id="clip0_2670_6529">
       <rect width="56" height="56" fill="white"/>
@@ -153,11 +153,11 @@ export const Header = () => {
   </g>
   <defs>
     <linearGradient id="paint0_linear_2222_148" x1="0.5" y1="0.5" x2="60.7923" y2="7.09153" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#00C5EA"/>
-      <stop offset="0.235" stop-color="#7800FF"/>
-      <stop offset="0.51" stop-color="#DF00B4"/>
-      <stop offset="0.735" stop-color="#FF0080"/>
-      <stop offset="1" stop-color="#FF9600"/>
+      <stop stopColor="#00C5EA"/>
+      <stop offset="0.235" stopColor="#7800FF"/>
+      <stop offset="0.51" stopColor="#DF00B4"/>
+      <stop offset="0.735" stopColor="#FF0080"/>
+      <stop offset="1" stopColor="#FF9600"/>
     </linearGradient>
     <clipPath id="clip0_2222_148">
       <rect width="56" height="56" fill="white"/>
@@ -179,11 +179,11 @@ export const Header = () => {
   </g>
   <defs>
     <linearGradient id="paint0_linear_2670_6539" x1="0.5" y1="0.5" x2="60.7923" y2="7.09153" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#00C5EA"/>
-      <stop offset="0.235" stop-color="#7800FF"/>
-      <stop offset="0.51" stop-color="#DF00B4"/>
-      <stop offset="0.735" stop-color="#FF0080"/>
-      <stop offset="1" stop-color="#FF9600"/>
+      <stop stopColor="#00C5EA"/>
+      <stop offset="0.235" stopColor="#7800FF"/>
+      <stop offset="0.51" stopColor="#DF00B4"/>
+      <stop offset="0.735" stopColor="#FF0080"/>
+      <stop offset="1" stopColor="#FF9600"/>
     </linearGradient>
     <clipPath id="clip0_2670_6539">
       <rect width="56" height="56" fill="white"/>
@@ -199,11 +199,11 @@ export const Header = () => {
   </g>
   <defs>
     <linearGradient id="paint0_linear_2670_6509" x1="0.5" y1="0.5" x2="60.7923" y2="7.09153" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#00C5EA"/>
-      <stop offset="0.235" stop-color="#7800FF"/>
-      <stop offset="0.51" stop-color="#DF00B4"/>
-      <stop offset="0.735" stop-color="#FF0080"/>
-      <stop offset="1" stop-color="#FF9600"/>
+      <stop stopColor="#00C5EA"/>
+      <stop offset="0.235" stopColor="#7800FF"/>
+      <stop offset="0.51" stopColor="#DF00B4"/>
+      <stop offset="0.735" stopColor="#FF0080"/>
+      <stop offset="1" stopColor="#FF9600"/>
     </linearGradient>
     <clipPath id="clip0_2670_6509">
       <rect width="56" height="56" fill="white"/>
@@ -219,11 +219,11 @@ export const Header = () => {
   <path d="M24.7852 34.6398C24.7852 32.8351 26.2482 31.3721 28.053 31.3721C29.8578 31.3721 31.3209 32.8351 31.3209 34.6398V37.8567H24.7852V34.6398Z" stroke="#19181A" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
   <defs>
     <linearGradient id="paint0_linear_2005_5383" x1="0.5" y1="0.5" x2="60.7923" y2="7.09153" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#00C5EA"/>
-      <stop offset="0.235" stop-color="#7800FF"/>
-      <stop offset="0.51" stop-color="#DF00B4"/>
-      <stop offset="0.735" stop-color="#FF0080"/>
-      <stop offset="1" stop-color="#FF9600"/>
+      <stop stopColor="#00C5EA"/>
+      <stop offset="0.235" stopColor="#7800FF"/>
+      <stop offset="0.51" stopColor="#DF00B4"/>
+      <stop offset="0.735" stopColor="#FF0080"/>
+      <stop offset="1" stopColor="#FF9600"/>
     </linearGradient>
   </defs>
 </svg></div><div><div className="dd-lb-txt">Retail</div></div></a></div></div></nav></div><div data-hover="false" data-delay="300" data-w-id="8613cb5b-3ac2-78da-4b55-13dab9a1d61f" className="dropdown-mega w-dropdown"><div className="dropdown-toggle w-dropdown-toggle"><div className="chev-icon w-icon-dropdown-toggle"></div><div className="dd-txt">Resources</div></div><nav className="mega-dd w-dropdown-list"><div className="dd-wrapper"><div className="links-col"><div className="dd-heading">Discover</div><a href="/resources" className="dd-linkblock w-inline-block"><div className="dd-ico w-embed"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -292,6 +292,6 @@ export const Header = () => {
       <rect width="14" height="14" fill="white"/>
     </clipPath>
   </defs>
-</svg></div><div className="dd-lb-txt">Careers</div></a></div></div></nav></div><a href="/security" className="navbar_link-new mob w-nav-link">Security</a></nav><div id="w-node-_8613cb5b-3ac2-78da-4b55-13dab9a1d673-b9a1d564" className="navbar-btns-wrap right"><a href="/demo" className="btn-gradient-wrapper w-inline-block"><div className="btn-txt">Let&#x27;s connect</div><div className="btn-gradient blue-green"></div></a></div><a id="w-node-_8613cb5b-3ac2-78da-4b55-13dab9a1d67a-b9a1d564" href="/demo" className="btn-gradient-wrapper hidden-desktop w-inline-block"><div className="btn-txt small-navbar">Book a demo</div><div className="btn-gradient"></div></a></div><div className="navbar_menu-button w-nav-button"><div className="menu-icon_component"><div className="menu-icon_line-top"></div><div className="menu-icon_line-middle"><div className="menu-icon_line-middle-inner"></div></div><div className="menu-icon_line-bottom"></div></div></div></div></div></div>
+</svg></div><div className="dd-lb-txt">Careers</div></a></div></div></nav></div><a href="/security" className="navbar_link-new mob w-nav-link">Security</a></nav><div id="w-node-_8613cb5b-3ac2-78da-4b55-13dab9a1d673-b9a1d564" className="navbar-btns-wrap right"><a href="/demo" className="btn-gradient-wrapper w-inline-block"><div className="btn-txt">Let&#x27;s connect</div><div className="btn-gradient blue-green"></div></a></div><a id="w-node-_8613cb5b-3ac2-78da-4b55-13dab9a1d67a-b9a1d564" href="/demo" className="btn-gradient-wrapper hidden-desktop w-inline-block"><div className="btn-txt small-navbar">Book a demo</div><div className="btn-gradient"></div></a></div><div className="navbar_menu-button w-nav-button"><div className="menu-icon_component"><div className="menu-icon_line-top"></div><div className="menu-icon_line-middle"><div className="menu-icon_line-middle-inner"></div></div><div className="menu-icon_line-bottom"></div></div></div></div></div></div></div>
   );
 };
