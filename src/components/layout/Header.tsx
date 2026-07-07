@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Link from 'next/link';
 import {useTranslation} from '@/hooks/useTranslation';
 
@@ -8,6 +8,32 @@ export const Header = () => {
   const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  // Smart Header Scroll Logic
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Add slight shadow when scrolled past top
+      setIsScrolled(currentScrollY > 20);
+      
+      // Hide header when scrolling down, show when scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsHidden(true);
+      } else if (currentScrollY < lastScrollY) {
+        setIsHidden(false);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   const toggleDropdown = (name: string) => {
     if (activeDropdown === name) {
@@ -18,7 +44,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 flex flex-col">
+    <header className={`fixed top-0 left-0 w-full z-50 flex flex-col transition-transform duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} ${isScrolled ? 'shadow-md' : ''}`}>
       {/* Announcement Banner */}
       <div className="bg-[#111] text-white text-sm font-medium py-2 px-4 flex items-center justify-center gap-3">
         <span>{t('announcement.text')}</span>
@@ -38,7 +64,7 @@ export const Header = () => {
         {/* Logo */}
         <div className="flex-shrink-0 flex items-center">
           <Link href="/">
-            <img src="/assets/logo/logo_mavedda.svg" alt="Mavedda Logo" className="h-7 w-auto" />
+            <img src="/assets/logo/logo_mavedda.svg" alt="Mavedda Logo" className="h-9 w-auto" />
           </Link>
         </div>
 

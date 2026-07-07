@@ -1,10 +1,11 @@
 import type {Metadata} from "next";
-import {Inter, Outfit} from "next/font/google";
+import {Outfit, Plus_Jakarta_Sans} from "next/font/google";
 import "./globals.css";
 import {AppProviders} from "@/providers/AppProviders";
 import {LanguageProvider} from "@/providers/LanguageProvider";
+import {FloatingControls} from "@/components/layout/FloatingControls";
 
-const inter = Inter({
+const inter = Plus_Jakarta_Sans({
   variable: "--font-inter",
   subsets: ["latin"],
 });
@@ -37,6 +38,7 @@ export default function RootLayout({
         <LanguageProvider>
           <AppProviders>
             {children}
+            <FloatingControls />
           </AppProviders>
         </LanguageProvider>
       </body>
