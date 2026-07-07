@@ -59,7 +59,7 @@ export const MetricsGrid = () => {
         <div className="w-full h-px bg-gray-200 my-8"></div>
 
         {/* Spacer */}
-        <div className="hidden">
+        <div className="hidden"></div>
 
       </div>
     </section>
