@@ -17,9 +17,9 @@ export default function Home() {
       
       {/* Page Content from old-design.html */}
       <MetricsGrid />
+      <SecurityAndStrategy />
       <CompoundingAdvantage />
       <Integrations />
-      <SecurityAndStrategy />
       <CTASection />
 
       <Footer />

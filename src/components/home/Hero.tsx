@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen bg-black overflow-hidden pt-32 pb-16 lg:pt-48 lg:pb-24 flex flex-col">
+    <section className="relative w-full h-[100dvh] bg-black overflow-hidden pt-28 lg:pt-40 flex flex-col">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
         
         {/* Headlines */}
