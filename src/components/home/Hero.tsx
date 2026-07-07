@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Hero = () => {
   return (
-    <section className="relative w-full bg-black overflow-hidden pt-32 pb-16 lg:pt-48 lg:pb-24">
+    <section className="relative w-full min-h-screen bg-black overflow-hidden pt-32 pb-16 lg:pt-48 lg:pb-24 flex flex-col">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
         
         {/* Headlines */}
@@ -35,22 +35,22 @@ export const Hero = () => {
       </div>
 
       {/* Hero Background Image with glowing cube */}
-      <div className="relative w-full max-w-[1440px] mx-auto mt-[-100px] md:mt-[-150px] lg:mt-[-250px] z-0">
+      <div className="relative w-full max-w-[1440px] mx-auto mt-[-80px] md:mt-[-120px] lg:mt-[-200px] z-0">
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 h-full w-full pointer-events-none"></div>
         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
         <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
         <img 
           src="https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/69f47187219545bf5410b5e4_bg-hero-home-2c.webp" 
           alt="Glowing Cube on Mountains" 
-          className="w-full object-cover opacity-90"
+          className="w-full object-cover opacity-90 h-[50vh] md:h-auto object-bottom"
         />
       </div>
 
-      {/* Marquee Section */}
-      <div className="relative w-full border-t border-gray-900 bg-black py-10 overflow-hidden mt-[-2px]">
+      {/* Marquee Section (Absolute at bottom of Hero) */}
+      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/80 to-transparent pt-10 pb-6 overflow-hidden z-30">
         {/* Gradient overlays for marquee */}
-        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-black to-transparent z-40 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-black to-transparent z-40 pointer-events-none"></div>
         
         {/* Marquee track */}
         <div className="flex w-max animate-marquee">

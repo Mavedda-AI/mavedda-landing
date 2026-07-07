@@ -18,13 +18,13 @@ export const Header = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      // Add slight shadow when scrolled past top
+      // Add slight shadow when scrolled past top (though it will be hidden, keeping for edge cases)
       setIsScrolled(currentScrollY > 20);
       
-      // Hide header when scrolling down, show when scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Hide header immediately as soon as scrolling starts, show ONLY at the very top (scrollY === 0)
+      if (currentScrollY > 10) {
         setIsHidden(true);
-      } else if (currentScrollY < lastScrollY) {
+      } else if (currentScrollY === 0) {
         setIsHidden(false);
       }
       
