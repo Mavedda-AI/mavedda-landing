@@ -35,7 +35,7 @@ export default async function JobDetailsPage({ params }: { params: Promise<{ slu
 
         <div className="flex gap-4 mb-16">
           <Link 
-            href={`/kariyer/${params.slug}/basvuru`}
+            href={`/kariyer/${slug}/basvuru`}
             className="bg-[#1a1a1a] text-white px-10 py-4 rounded-full text-[18px] font-medium hover:bg-black transition-colors"
           >
             Başvur
@@ -103,7 +103,7 @@ export default async function JobDetailsPage({ params }: { params: Promise<{ slu
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-black/10 flex justify-between items-center z-50 md:hidden shadow-[0_-10px_20px_rgba(0,0,0,0.05)]">
         <div className="font-bold text-[18px] line-clamp-1 mr-4">{job.title}</div>
         <Link 
-          href={`/kariyer/${params.slug}/basvuru`}
+          href={`/kariyer/${slug}/basvuru`}
           className="bg-[#1a1a1a] text-white px-8 py-3 rounded-full font-medium whitespace-nowrap"
         >
           Başvur
