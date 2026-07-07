@@ -1,9 +1,12 @@
 import React from 'react';
+import {Button} from '@/components/ui/Button';
 
 export const CompoundingAdvantage = () => {
   return (
     <section className="w-full bg-white py-32 overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-6">
+        
+        {/* Top Content: Text and Image */}
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
           {/* Content Side */}
@@ -50,6 +53,116 @@ export const CompoundingAdvantage = () => {
           </div>
 
         </div>
+
+        {/* Pricing Table Section */}
+        <div className="mt-32 pt-16 border-t border-gray-100">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <h3 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Flexible plans for AI builders</h3>
+            <p className="text-gray-500 mt-6 text-lg md:text-xl">
+              From integrating robust API models to fully custom turnkey AI software, we scale with your operational needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            
+            {/* Starter Plan */}
+            <div className="flex flex-col bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-xl transition-all duration-300">
+              <h4 className="text-xl font-bold text-gray-900 mb-2">API Access</h4>
+              <p className="text-gray-500 text-sm mb-6 h-10">Essential API access to our pre-trained AI models.</p>
+              <div className="mb-6">
+                <span className="text-4xl font-extrabold text-gray-900">$499</span>
+                <span className="text-gray-500">/mo</span>
+              </div>
+              <ul className="flex flex-col gap-4 mb-8 flex-1">
+                <li className="flex items-center gap-3 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  Access to base AI models
+                </li>
+                <li className="flex items-center gap-3 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  Up to 100,000 requests/mo
+                </li>
+                <li className="flex items-center gap-3 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  Standard API documentation
+                </li>
+                <li className="flex items-center gap-3 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  Community support
+                </li>
+              </ul>
+              <Button className="w-full bg-gray-50 text-gray-900 border border-gray-200 hover:bg-gray-100 hover:border-gray-300 py-6 rounded-xl font-semibold">
+                Get Started
+              </Button>
+            </div>
+
+            {/* Pro Plan (Highlighted) */}
+            <div className="flex flex-col bg-black rounded-3xl p-8 shadow-2xl relative transform md:-translate-y-4">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#00c5ea] to-[#7800ff] text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase shadow-lg">
+                Most Popular
+              </div>
+              <h4 className="text-xl font-bold text-white mb-2">Custom Model</h4>
+              <p className="text-gray-400 text-sm mb-6 h-10">Fine-tuned models tailored to your specific operations.</p>
+              <div className="mb-6">
+                <span className="text-4xl font-extrabold text-white">$2,499</span>
+                <span className="text-gray-400">/mo</span>
+              </div>
+              <ul className="flex flex-col gap-4 mb-8 flex-1">
+                <li className="flex items-center gap-3 text-sm text-gray-300">
+                  <svg className="w-5 h-5 text-[#00c5ea] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  Custom fine-tuning on your data
+                </li>
+                <li className="flex items-center gap-3 text-sm text-gray-300">
+                  <svg className="w-5 h-5 text-[#00c5ea] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  Unlimited requests & usage
+                </li>
+                <li className="flex items-center gap-3 text-sm text-gray-300">
+                  <svg className="w-5 h-5 text-[#00c5ea] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  Dedicated inference compute
+                </li>
+                <li className="flex items-center gap-3 text-sm text-gray-300">
+                  <svg className="w-5 h-5 text-[#00c5ea] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  Priority technical support
+                </li>
+              </ul>
+              <Button className="w-full bg-white text-black hover:bg-gray-200 py-6 rounded-xl font-semibold">
+                Start Building
+              </Button>
+            </div>
+
+            {/* Enterprise Plan */}
+            <div className="flex flex-col bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-xl transition-all duration-300">
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Turnkey System</h4>
+              <p className="text-gray-500 text-sm mb-6 h-10">End-to-end custom software and AI integration.</p>
+              <div className="mb-6">
+                <span className="text-4xl font-extrabold text-gray-900">Custom</span>
+              </div>
+              <ul className="flex flex-col gap-4 mb-8 flex-1">
+                <li className="flex items-center gap-3 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  Full stack web & mobile development
+                </li>
+                <li className="flex items-center gap-3 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  On-premise or VPC deployment
+                </li>
+                <li className="flex items-center gap-3 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  Full intellectual property transfer
+                </li>
+                <li className="flex items-center gap-3 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                  24/7 Enterprise SLA
+                </li>
+              </ul>
+              <Button className="w-full bg-gray-50 text-gray-900 border border-gray-200 hover:bg-gray-100 hover:border-gray-300 py-6 rounded-xl font-semibold">
+                Contact Sales
+              </Button>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
   );
