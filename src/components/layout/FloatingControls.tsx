@@ -1,10 +1,10 @@
 "use client";
 
 import React, {useState} from "react";
-import {useLanguage} from "@/hooks/useTranslation";
+import {useTranslation} from "@/hooks/useTranslation";
 
 export const FloatingControls = () => {
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage } = useTranslation();
   const [isDark, setIsDark] = useState(true); // Default to dark based on current design
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
