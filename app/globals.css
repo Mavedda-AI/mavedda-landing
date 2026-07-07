@@ -51,3 +51,18 @@ body {
 @utility animate-spin-3d {
   animation: spin-3d 30s linear infinite;
 }
+
+/* 3D Carousel */
+@keyframes spinCarousel {
+  from {
+    transform: translateZ(-580px) rotateY(0deg);
+  }
+  to {
+    transform: translateZ(-580px) rotateY(-360deg);
+  }
+}
+
+.carousel-track {
+  animation: spinCarousel 70s linear infinite;
+  transform-style: preserve-3d;
+}
