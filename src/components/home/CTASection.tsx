@@ -11,12 +11,10 @@ export const CTASection = () => {
           <img 
             src="https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/69f47187219545bf5410b5e4_bg-hero-home-2c.webp" 
             alt="CTA Background" 
-            className="w-full h-full object-cover object-left opacity-70"
+            className="w-full h-full object-cover object-left opacity-100"
           />
-          {/* Gradients to blend the image seamlessly into the black background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/40 to-black"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-transparent"></div>
+          {/* Gradient to blend the image right edge seamlessly into the black background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black"></div>
         </div>
       </div>
 
