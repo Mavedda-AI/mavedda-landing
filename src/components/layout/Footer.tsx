@@ -7,23 +7,15 @@ export const Footer = () => {
       <div className="max-w-[1400px] mx-auto">
         
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 lg:gap-x-0 mb-16">
           
-          {/* Column 1: Brand & Desc (col-span-3) */}
-          <div className="md:col-span-12 lg:col-span-3 flex flex-col gap-6">
+          {/* Column 1: Brand & Desc (col-span-4) */}
+          <div className="md:col-span-12 lg:col-span-4 flex flex-col gap-6 lg:pr-24">
             <Link href="/" className="inline-block">
-              <div 
-                className="h-10 w-48 bg-blue-500" 
-                style={{
-                  maskImage: 'url(/assets/logo/logo_mavedda.svg)',
-                  maskSize: 'contain',
-                  maskRepeat: 'no-repeat',
-                  maskPosition: 'left center',
-                  WebkitMaskImage: 'url(/assets/logo/logo_mavedda.svg)',
-                  WebkitMaskSize: 'contain',
-                  WebkitMaskRepeat: 'no-repeat',
-                  WebkitMaskPosition: 'left center',
-                }}
+              <img 
+                src="/assets/logo/logo_mavedda.svg" 
+                alt="Mavedda" 
+                className="h-20 object-contain brightness-0 invert" 
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
@@ -32,7 +24,7 @@ export const Footer = () => {
           </div>
           
           {/* Column 2: Product (col-span-2) */}
-          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-6">
+          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-6 lg:border-l lg:border-white/10 lg:pl-10">
             <h4 className="text-white font-semibold tracking-wide">Product</h4>
             <ul className="flex flex-col gap-4 text-sm">
               <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Overview</Link></li>
@@ -43,7 +35,7 @@ export const Footer = () => {
           </div>
 
           {/* Column 3: Solutions (col-span-2) */}
-          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-6">
+          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-6 lg:border-l lg:border-white/10 lg:pl-10">
             <h4 className="text-white font-semibold tracking-wide">Solutions</h4>
             <ul className="flex flex-col gap-4 text-sm">
               <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
@@ -55,7 +47,7 @@ export const Footer = () => {
           </div>
 
           {/* Column 4: Company (col-span-2) */}
-          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-6">
+          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-6 lg:border-l lg:border-white/10 lg:pl-10">
             <h4 className="text-white font-semibold tracking-wide">Company</h4>
             <ul className="flex flex-col gap-4 text-sm">
               <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
@@ -65,8 +57,8 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 5: Contact Us (col-span-3) */}
-          <div className="md:col-span-12 lg:col-span-3 flex flex-col gap-6">
+          {/* Column 5: Contact Us (col-span-2) */}
+          <div className="md:col-span-12 lg:col-span-2 flex flex-col gap-6 lg:border-l lg:border-white/10 lg:pl-10">
             <h4 className="text-white font-semibold tracking-wide">Contact Us</h4>
             
             <div className="flex flex-col gap-4 text-sm text-gray-400">
@@ -108,8 +100,17 @@ export const Footer = () => {
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500">
             <div className="flex items-center gap-4">
-              <Link href="#" className="text-blue-500 font-bold hover:text-blue-400 transition-colors group">
-                <span className="inline-flex whitespace-pre">
+              <Link href="#" className="font-bold transition-transform group hover:scale-105">
+                <span 
+                  className="inline-flex whitespace-pre bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage: 'url(/assets/utils/rainbow_utils.svg)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
+                >
                   {"Hi AI Its Mavedda".split('').map((char, index) => (
                     <span 
                       key={index} 
