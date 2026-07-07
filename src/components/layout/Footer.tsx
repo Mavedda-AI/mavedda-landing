@@ -130,7 +130,7 @@ export const Footer = () => {
             © {new Date().getFullYear()} <span className="font-semibold text-gray-300">Mavedda</span>. All rights reserved.
           </div>
 
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
             <div className="flex items-center gap-4">
               <Link href="#" className="font-bold transition-transform group hover:scale-105">
                 <span 
