@@ -86,7 +86,7 @@ export default function Footer() {
           <h1 className="text-[120px] md:text-[200px] lg:text-[280px] font-medium tracking-tighter leading-none -ml-2 md:-ml-4">
             Mavedda
           </h1>
-          <p className="text-[#d4ff8f] text-[24px] md:text-[32px] font-serif italic tracking-tight mt-[-10px] md:mt-[-20px] -ml-1 md:-ml-3">
+          <p className="text-[#72E5FF] text-[24px] md:text-[32px] font-serif italic tracking-tight mt-[-10px] md:mt-[-20px] -ml-1 md:-ml-3">
             Sıradan olsaydık, Mavedda olamazdık.
           </p>
         </div>
