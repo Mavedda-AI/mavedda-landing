@@ -1,24 +1,30 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/home/Hero";
+import {Header} from "@/components/layout/Header";
+import {Footer} from "@/components/layout/Footer";
+import {Hero} from "@/components/home/Hero";
+import {MetricsGrid} from "@/components/home/MetricsGrid";
+import {PlatformOverview} from "@/components/home/PlatformOverview";
+import {Testimonials} from "@/components/home/Testimonials";
+import {CompoundingAdvantage} from "@/components/home/CompoundingAdvantage";
+import {Integrations} from "@/components/home/Integrations";
+import {SecurityAndStrategy} from "@/components/home/SecurityAndStrategy";
+import {CTASection} from "@/components/home/CTASection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col w-full">
+    <main className="flex min-h-screen flex-col w-full bg-black">
       <Header />
       
       {/* Hero Section */}
       <Hero />
       
-      {/* Test Section */}
-      <section className="w-full py-32 flex flex-col items-center justify-center bg-white text-black min-h-[400px]">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl font-heading font-bold mb-6">Test Metni Alanı</h2>
-          <p className="text-xl text-gray-600">
-            Burası şimdilik Header ve Footer arasındaki yapıyı test etmek için eklenmiş bir içerik alanıdır. Daha sonra bu alana uygulamanın diğer bileşenleri (Özellikler, Müşteriler, Fiyatlandırma vb.) gelecektir.
-          </p>
-        </div>
-      </section>
+      {/* Page Content from old-design.html */}
+      <MetricsGrid />
+      <PlatformOverview />
+      <Testimonials />
+      <CompoundingAdvantage />
+      <Integrations />
+      <SecurityAndStrategy />
+      <CTASection />
 
       <Footer />
     </main>

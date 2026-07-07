@@ -4,9 +4,9 @@ import Link from 'next/link';
 export const TopBanner = () => {
   return (
     <div className="w-full bg-[#111111] text-gray-300 py-2.5 px-4 text-xs sm:text-sm flex justify-center items-center gap-2 border-b border-[#222]">
-      <span>Swish AI is now part of Unframe. Learn more about the acquisition.</span>
+      <span>Anneden anneye güvenle. Salutbabe yayında</span>
       <Link 
-        href="https://www.unframe.ai/blog/swish-ai-is-now-part-of-unframe" 
+        href="https://salutbabe.com/download" 
         className="font-medium text-white hover:text-gray-300 transition-colors flex items-center gap-1 ml-1"
       >
         Learn more

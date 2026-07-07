@@ -38,7 +38,6 @@
   }
   
   * {
-    @apply border-border;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
