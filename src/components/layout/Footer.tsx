@@ -12,7 +12,19 @@ export const Footer = () => {
           {/* Column 1: Brand & Desc (col-span-3) */}
           <div className="md:col-span-12 lg:col-span-3 flex flex-col gap-6">
             <Link href="/" className="inline-block">
-              <img src="/assets/trusted-logo/logo-white.png" alt="Mavedda" className="h-10 object-contain" />
+              <div 
+                className="h-10 w-48 bg-blue-500" 
+                style={{
+                  maskImage: 'url(/assets/logo/logo_mavedda.svg)',
+                  maskSize: 'contain',
+                  maskRepeat: 'no-repeat',
+                  maskPosition: 'left center',
+                  WebkitMaskImage: 'url(/assets/logo/logo_mavedda.svg)',
+                  WebkitMaskSize: 'contain',
+                  WebkitMaskRepeat: 'no-repeat',
+                  WebkitMaskPosition: 'left center',
+                }}
+              />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
               AI-powered platform providing turnkey software solutions including web, mobile, backend systems, and specialized AI services.
