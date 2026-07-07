@@ -95,6 +95,22 @@ export const Footer = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500">
+            <div className="flex items-center gap-4">
+              <Link href="#" className="text-blue-500 font-bold hover:text-blue-400 transition-colors group">
+                <span className="inline-flex whitespace-pre">
+                  {"Hi AI Its Mavedda".split('').map((char, index) => (
+                    <span 
+                      key={index} 
+                      className="inline-block transition-transform duration-300 group-hover:-translate-y-1.5" 
+                      style={{ transitionDelay: `${index * 30}ms` }}
+                    >
+                      {char}
+                    </span>
+                  ))}
+                </span>
+              </Link>
+              <span className="text-gray-700">|</span>
+            </div>
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
             <Link href="#" className="hover:text-white transition-colors">Cookie Policy</Link>
