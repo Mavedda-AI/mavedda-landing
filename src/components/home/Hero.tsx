@@ -56,23 +56,23 @@ export const Hero = () => {
         <div className="flex w-max animate-marquee">
           {/* First set of logos */}
           <div className="flex items-center gap-16 px-8">
-            <img src="/assets/trusted-logo/Lebara-logo.svg" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
-            <img src="/assets/trusted-logo/logo-onder.png.webp" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
-            <img src="/assets/trusted-logo/logo-white.png" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Mavedda" />
-            <img src="/assets/trusted-logo/Lebara-logo.svg" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
-            <img src="/assets/trusted-logo/logo-onder.png.webp" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
-            <img src="/assets/trusted-logo/logo-white.png" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Mavedda" />
-            <img src="/assets/trusted-logo/Lebara-logo.svg" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
+            <img src="/assets/trusted-logo/Lebara-logo.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
+            <img src="/assets/trusted-logo/logo-onder.png.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
+            <img src="/assets/trusted-logo/logo-white.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Mavedda" />
+            <img src="/assets/trusted-logo/Lebara-logo.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
+            <img src="/assets/trusted-logo/logo-onder.png.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
+            <img src="/assets/trusted-logo/logo-white.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Mavedda" />
+            <img src="/assets/trusted-logo/Lebara-logo.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
           </div>
           {/* Duplicate set for seamless looping */}
           <div className="flex items-center gap-16 px-8">
-            <img src="/assets/trusted-logo/Lebara-logo.svg" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
-            <img src="/assets/trusted-logo/logo-onder.png.webp" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
-            <img src="/assets/trusted-logo/logo-white.png" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Mavedda" />
-            <img src="/assets/trusted-logo/Lebara-logo.svg" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
-            <img src="/assets/trusted-logo/logo-onder.png.webp" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
-            <img src="/assets/trusted-logo/logo-white.png" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Mavedda" />
-            <img src="/assets/trusted-logo/Lebara-logo.svg" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
+            <img src="/assets/trusted-logo/Lebara-logo.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
+            <img src="/assets/trusted-logo/logo-onder.png.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
+            <img src="/assets/trusted-logo/logo-white.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Mavedda" />
+            <img src="/assets/trusted-logo/Lebara-logo.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
+            <img src="/assets/trusted-logo/logo-onder.png.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
+            <img src="/assets/trusted-logo/logo-white.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Mavedda" />
+            <img src="/assets/trusted-logo/Lebara-logo.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
           </div>
         </div>
       </div>
