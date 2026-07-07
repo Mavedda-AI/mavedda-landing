@@ -12,28 +12,62 @@ export const Header = () => {
   // Smart Header Scroll Logic
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+
+  // Lock body scroll when header is visible at the top
+  useEffect(() => {
+    if (!isHidden && window.scrollY <= 0) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isHidden]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // Add slight shadow when scrolled past top (though it will be hidden, keeping for edge cases)
-      setIsScrolled(currentScrollY > 20);
-      
-      // Hide header immediately as soon as scrolling starts, show ONLY at the very top (scrollY === 0)
-      if (currentScrollY > 10) {
+    // Handle Desktop scroll wheel
+    const handleWheel = (e: WheelEvent) => {
+      if (!isHidden && window.scrollY <= 0 && e.deltaY > 0) {
         setIsHidden(true);
-      } else if (currentScrollY === 0) {
-        setIsHidden(false);
       }
-      
-      setLastScrollY(currentScrollY);
     };
 
+    // Handle Mobile touch
+    let startY = 0;
+    const handleTouchStart = (e: TouchEvent) => {
+      startY = e.touches[0].clientY;
+    };
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isHidden && window.scrollY <= 0) {
+        const currentY = e.touches[0].clientY;
+        if (startY - currentY > 10) { // Swiped up (scrolling down)
+          setIsHidden(true);
+        }
+      }
+    };
+
+    // Handle regular scroll logic for when body is unlocked
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 20);
+      
+      // If user naturally scrolls back to absolute top, show header
+      if (currentScrollY <= 0) {
+        setIsHidden(false);
+      }
+    };
+
+    window.addEventListener('wheel', handleWheel, { passive: true });
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isHidden]);
 
   const toggleDropdown = (name: string) => {
     if (activeDropdown === name) {
