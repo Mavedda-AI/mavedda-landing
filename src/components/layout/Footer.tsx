@@ -34,7 +34,7 @@ const footerLinks = {
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-[#111] text-white pt-24 pb-8 px-6 border-t border-[#222]">
+    <footer className="w-full bg-black text-white pt-24 pb-8 px-6 border-t border-[#222]">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 mb-20">
           
