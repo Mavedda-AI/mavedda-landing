@@ -2,7 +2,6 @@ import {Header} from "@/components/layout/Header";
 import {Footer} from "@/components/layout/Footer";
 import {Hero} from "@/components/home/Hero";
 import {MetricsGrid} from "@/components/home/MetricsGrid";
-import {Testimonials} from "@/components/home/Testimonials";
 import {CompoundingAdvantage} from "@/components/home/CompoundingAdvantage";
 import {Integrations} from "@/components/home/Integrations";
 import {SecurityAndStrategy} from "@/components/home/SecurityAndStrategy";
@@ -18,7 +17,6 @@ export default function Home() {
       
       {/* Page Content from old-design.html */}
       <MetricsGrid />
-      <Testimonials />
       <CompoundingAdvantage />
       <Integrations />
       <SecurityAndStrategy />

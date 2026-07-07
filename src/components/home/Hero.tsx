@@ -47,7 +47,7 @@ export const Hero = () => {
       </div>
 
       {/* Marquee Section (Absolute at bottom of Hero) */}
-      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/80 to-transparent pt-10 pb-6 overflow-hidden z-30">
+      <div className="absolute bottom-6 left-0 w-full pt-10 pb-2 overflow-hidden z-30">
         {/* Gradient overlays for marquee */}
         <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-black to-transparent z-40 pointer-events-none"></div>
         <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-black to-transparent z-40 pointer-events-none"></div>

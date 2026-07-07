@@ -43,10 +43,10 @@ export const FloatingControls = () => {
           {/* Settings Button */}
           <button 
             onClick={() => setIsSettingsOpen(!isSettingsOpen)}
-            className="bg-[#0b3566] text-white p-3 rounded-r-xl shadow-lg hover:bg-[#0f4b8f] transition-all flex items-center justify-center border border-l-0 border-white/10 z-10"
+            className="bg-[#1a1a1a] text-white p-4 rounded-r-2xl shadow-lg hover:bg-[#2a2a2a] transition-all flex items-center justify-center border border-l-0 border-white/10 z-20"
             title="Settings"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-500 ${isSettingsOpen ? 'rotate-90' : 'rotate-0'}`}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-500 ${isSettingsOpen ? 'rotate-90' : 'rotate-0'}`}>
               <circle cx="12" cy="12" r="3"></circle>
               <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
             </svg>
@@ -54,9 +54,9 @@ export const FloatingControls = () => {
 
           {/* Settings Panel Content */}
           <div 
-            className={`absolute left-full ml-3 transition-all duration-300 origin-left whitespace-nowrap ${isSettingsOpen ? 'opacity-100 translate-x-0 scale-100 pointer-events-auto' : 'opacity-0 -translate-x-4 scale-95 pointer-events-none'}`}
+            className={`absolute left-full ml-3 transition-all duration-300 origin-left whitespace-nowrap z-10 ${isSettingsOpen ? 'opacity-100 translate-x-0 scale-100 pointer-events-auto' : 'opacity-0 -translate-x-4 scale-95 pointer-events-none'}`}
           >
-            <div className="bg-[#0b3566] text-white rounded-xl shadow-2xl p-2 flex items-center gap-3 backdrop-blur-md bg-opacity-95 border border-white/10">
+            <div className="bg-[#1a1a1a] text-white rounded-2xl shadow-2xl p-2 flex items-center gap-3 border border-white/10">
               {/* Theme Toggle */}
               <button 
                 onClick={() => setIsDark(!isDark)}
