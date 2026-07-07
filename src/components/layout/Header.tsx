@@ -8,17 +8,63 @@ export const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
+    let isAnimating = false;
+
+    const handleWheel = (e: WheelEvent) => {
+      if (window.scrollY <= 0 && e.deltaY > 0) {
+        if (isVisible && !isAnimating) {
+          e.preventDefault(); // Sayfanın kaymasını engelle
+          setIsVisible(false);
+          isAnimating = true;
+          
+          // Animasyon bitene kadar kaydırmayı engelle (300ms)
+          setTimeout(() => {
+            isAnimating = false;
+          }, 300);
+        } else if (isAnimating) {
+          e.preventDefault();
+        }
+      }
+    };
+
+    let touchStartY = 0;
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartY = e.touches[0].clientY;
+    };
+    const handleTouchMove = (e: TouchEvent) => {
+      if (window.scrollY <= 0) {
+        const touchY = e.touches[0].clientY;
+        if (touchStartY > touchY) { // Aşağı kaydırılıyor
+          if (isVisible && !isAnimating) {
+            e.preventDefault();
+            setIsVisible(false);
+            isAnimating = true;
+            setTimeout(() => { isAnimating = false; }, 300);
+          } else if (isAnimating) {
+            e.preventDefault();
+          }
+        }
+      }
+    };
+
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsVisible(false);
-      } else {
+      if (window.scrollY <= 0 && !isVisible) {
         setIsVisible(true);
       }
     };
 
+    window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isVisible]);
 
   return (
     <header 

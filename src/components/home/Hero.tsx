@@ -1,10 +1,33 @@
 import React from 'react';
 import Image from 'next/image';
 import {Button} from '@/components/ui/Button';
+import fs from 'fs';
+import path from 'path';
+
+// Helper to get logos at build time
+const getLogos = () => {
+  try {
+    const logosDir = path.join(process.cwd(), 'public/assets/trusted-logo');
+    if (fs.existsSync(logosDir)) {
+      const files = fs.readdirSync(logosDir);
+      return files.filter(file => /\.(jpe?g|png|webp|svg)$/i.test(file));
+    }
+  } catch (error) {
+    console.error("Error reading logos directory", error);
+  }
+  return [];
+};
 
 export const Hero = () => {
+  const logos = getLogos();
+
+  // If no image files found, we can optionally use our placeholders, 
+  // but for the marquee to work perfectly with images we map them.
+  // We duplicate the array to create a seamless infinite loop.
+  const displayLogos = logos.length > 0 ? logos : [];
+
   return (
-    <section className="relative w-full h-screen min-h-[800px] flex flex-col justify-between overflow-hidden bg-black text-white pt-32">
+    <section className="relative w-full h-screen flex flex-col justify-between overflow-hidden bg-black text-white pt-32">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -44,22 +67,25 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Logos Strip */}
-      <div className="relative z-10 w-full border-t border-white/10 bg-black/40 backdrop-blur-sm py-6">
-        <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-between gap-6 overflow-hidden opacity-70 grayscale">
-          {/* Logo Placeholders matching the screenshot */}
-          <div className="text-sm font-bold tracking-widest uppercase">Avison<br/>Young</div>
-          <div className="flex items-center gap-2 text-xl font-semibold"><div className="w-4 h-4 bg-white rotate-45"></div>acora</div>
-          <div className="text-xs font-bold uppercase">Mast</div>
-          <div className="text-lg font-bold italic">erTel USA</div>
-          <div className="text-3xl font-serif tracking-widest">NZZ</div>
-          <div className="text-sm tracking-[0.2em] uppercase">Dorothy Gaynor</div>
-          <div className="text-xs font-bold leading-tight">Cushman &<br/>Wakefield</div>
-          <div className="text-2xl font-black">CLIMB</div>
-          <div className="text-xl font-bold italic">AST</div>
-          <div className="text-lg font-bold flex items-center"><div className="w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-b-[12px] border-b-white rotate-90 mr-1"></div>ARMIS</div>
+      {/* Logos Strip - Overlay at the absolute bottom of the hero */}
+      {displayLogos.length > 0 && (
+        <div className="absolute z-20 bottom-0 left-0 w-full py-10 overflow-hidden flex items-center">
+          <div className="flex w-max animate-marquee hover:pause whitespace-nowrap">
+            {/* Render the list twice for a seamless infinite loop */}
+            {[...displayLogos, ...displayLogos].map((file, index) => (
+              <div key={index} className="mx-8 md:mx-16 flex-shrink-0 flex items-center justify-center grayscale opacity-70 hover:opacity-100 transition-opacity">
+                <Image 
+                  src={`/assets/trusted-logo/${file}`} 
+                  alt={`Trusted by ${file.split('.')[0]}`} 
+                  width={120} 
+                  height={40} 
+                  className="object-contain h-10 w-auto"
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };
