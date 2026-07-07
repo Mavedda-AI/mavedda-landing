@@ -31,7 +31,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link href="https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/css/unframe-prev.webflow.shared.26ecaaf96.min.css" rel="stylesheet" type="text/css" />
       </head>
       <body
         className={`${inter.variable} ${outfit.variable} antialiased`}
