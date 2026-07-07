@@ -1,10 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const SecurityAndStrategy = () => {
+export const SecuritySection = () => {
   return (
     <div className="w-full bg-[#0a0a0a]">
-      
       {/* Security Section */}
       <section className="w-full py-32 overflow-hidden border-b border-white/10">
         <div className="max-w-[1280px] mx-auto px-6">
@@ -44,7 +43,13 @@ export const SecurityAndStrategy = () => {
           </div>
         </div>
       </section>
+    </div>
+  );
+};
 
+export const StrategySection = () => {
+  return (
+    <div className="w-full bg-[#0a0a0a]">
       {/* AI Strategy Section */}
       <section className="w-full py-32 overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 flex flex-col items-center text-center gap-8">
@@ -57,7 +62,6 @@ export const SecurityAndStrategy = () => {
           </p>
         </div>
       </section>
-
     </div>
   );
 };

@@ -4,7 +4,7 @@ import {Hero} from "@/components/home/Hero";
 import {MetricsGrid} from "@/components/home/MetricsGrid";
 import {CompoundingAdvantage} from "@/components/home/CompoundingAdvantage";
 import {Integrations} from "@/components/home/Integrations";
-import {SecurityAndStrategy} from "@/components/home/SecurityAndStrategy";
+import {SecuritySection, StrategySection} from "@/components/home/SecurityAndStrategy";
 import {CTASection} from "@/components/home/CTASection";
 
 export default function Home() {
@@ -15,10 +15,11 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
       
-      {/* Page Content from old-design.html */}
+      {/* Page Content */}
       <MetricsGrid />
-      <SecurityAndStrategy />
+      <SecuritySection />
       <CompoundingAdvantage />
+      <StrategySection />
       <Integrations />
       <CTASection />
 
