@@ -105,5 +105,39 @@
     "title2": "big project? Let's talk.",
     "desc": "Tell us your hardest, highest-stakes operational challenge. We’ll provide a production-grade technology solution in weeks.",
     "button": "Start your project"
+  },
+  "footer": {
+    "desc": "AI-powered platform providing turnkey software solutions including web, mobile, backend systems, and specialized AI services.",
+    "product": {
+      "title": "Product",
+      "overview": "Overview",
+      "howItWorks": "How it Works",
+      "capabilities": "Capabilities",
+      "dashboard": "Dashboard"
+    },
+    "solutions": {
+      "title": "Solutions",
+      "aiServices": "AI Services",
+      "webDev": "Web Development",
+      "mobileApp": "Mobile Apps",
+      "backend": "Backend Systems",
+      "turnkey": "Turnkey Projects"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "mission": "Our Mission",
+      "blog": "Our Blog",
+      "careers": "Careers"
+    },
+    "contact": "Contact Us",
+    "bottom": {
+      "rights": "All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "security": "Security",
+      "rss": "RSS Feed"
+    }
   }
 }

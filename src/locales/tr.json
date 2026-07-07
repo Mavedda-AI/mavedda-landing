@@ -105,5 +105,39 @@
     "title2": "inşa etmeye hazır mısınız?",
     "desc": "Bize en zorlu operasyonel mücadelenizi anlatın. Size haftalar içinde üretim kalitesinde bir teknoloji çözümü sunalım.",
     "button": "Projenizi Başlatın"
+  },
+  "footer": {
+    "desc": "Web, mobil, arka uç sistemleri ve özel yapay zeka hizmetleri dahil olmak üzere anahtar teslim yazılım çözümleri sunan yapay zeka destekli platform.",
+    "product": {
+      "title": "Ürün",
+      "overview": "Genel Bakış",
+      "howItWorks": "Nasıl Çalışır",
+      "capabilities": "Yetenekler",
+      "dashboard": "Panel"
+    },
+    "solutions": {
+      "title": "Çözümler",
+      "aiServices": "Yapay Zeka Hizmetleri",
+      "webDev": "Web Geliştirme",
+      "mobileApp": "Mobil Uygulamalar",
+      "backend": "Arka Uç Sistemleri",
+      "turnkey": "Anahtar Teslim Projeler"
+    },
+    "company": {
+      "title": "Şirket",
+      "about": "Hakkımızda",
+      "mission": "Misyonumuz",
+      "blog": "Blog",
+      "careers": "Kariyer"
+    },
+    "contact": "Bize Ulaşın",
+    "bottom": {
+      "rights": "Tüm hakları saklıdır.",
+      "privacy": "Gizlilik Politikası",
+      "terms": "Kullanım Şartları",
+      "cookies": "Çerez Politikası",
+      "security": "Güvenlik",
+      "rss": "RSS Kaynağı"
+    }
   }
 }

@@ -2,8 +2,10 @@
 
 import React, {useState} from 'react';
 import Link from 'next/link';
+import {useTranslation} from "@/hooks/useTranslation";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const [openSection, setOpenSection] = useState<string | null>(null);
 
   const toggleSection = (section: string) => {
@@ -27,7 +29,7 @@ export const Footer = () => {
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
-              AI-powered platform providing turnkey software solutions including web, mobile, backend systems, and specialized AI services.
+              {t('footer.desc')}
             </p>
           </div>
           
@@ -37,16 +39,16 @@ export const Footer = () => {
               onClick={() => toggleSection('product')}
               className="flex items-center justify-between w-full md:cursor-default py-4 md:py-0"
             >
-              <h4 className="text-white font-semibold tracking-wide">Product</h4>
+              <h4 className="text-white font-semibold tracking-wide">{t('footer.product.title')}</h4>
               <span className="md:hidden text-gray-400">
                 {openSection === 'product' ? '−' : '+'}
               </span>
             </button>
             <ul className={`flex flex-col gap-4 text-sm overflow-hidden transition-all duration-300 ${openSection === 'product' ? 'max-h-64 pt-2' : 'max-h-0 md:max-h-none'}`}>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Overview</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">How it Works</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Capabilities</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Dashboard</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.product.overview')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.product.howItWorks')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.product.capabilities')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.product.dashboard')}</Link></li>
             </ul>
           </div>
 
@@ -56,17 +58,17 @@ export const Footer = () => {
               onClick={() => toggleSection('solutions')}
               className="flex items-center justify-between w-full md:cursor-default py-4 md:py-0"
             >
-              <h4 className="text-white font-semibold tracking-wide">Solutions</h4>
+              <h4 className="text-white font-semibold tracking-wide">{t('footer.solutions.title')}</h4>
               <span className="md:hidden text-gray-400">
                 {openSection === 'solutions' ? '−' : '+'}
               </span>
             </button>
             <ul className={`flex flex-col gap-4 text-sm overflow-hidden transition-all duration-300 ${openSection === 'solutions' ? 'max-h-64 pt-2' : 'max-h-0 md:max-h-none'}`}>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Web Development</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Mobile Apps</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Backend Systems</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Turnkey Projects</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.solutions.aiServices')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.solutions.webDev')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.solutions.mobileApp')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.solutions.backend')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.solutions.turnkey')}</Link></li>
             </ul>
           </div>
 
@@ -76,22 +78,22 @@ export const Footer = () => {
               onClick={() => toggleSection('company')}
               className="flex items-center justify-between w-full md:cursor-default py-4 md:py-0"
             >
-              <h4 className="text-white font-semibold tracking-wide">Company</h4>
+              <h4 className="text-white font-semibold tracking-wide">{t('footer.company.title')}</h4>
               <span className="md:hidden text-gray-400">
                 {openSection === 'company' ? '−' : '+'}
               </span>
             </button>
             <ul className={`flex flex-col gap-4 text-sm overflow-hidden transition-all duration-300 ${openSection === 'company' ? 'max-h-64 pt-2' : 'max-h-0 md:max-h-none'}`}>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Our Mission</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Our Blog</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.company.about')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.company.mission')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.company.blog')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.company.careers')}</Link></li>
             </ul>
           </div>
 
           {/* Column 5: Contact Us (col-span-2) */}
           <div className="md:col-span-12 lg:col-span-2 flex flex-col gap-6 lg:border-l lg:border-white/10 lg:pl-10 pt-4 md:pt-0">
-            <h4 className="text-white font-semibold tracking-wide">Contact Us</h4>
+            <h4 className="text-white font-semibold tracking-wide">{t('footer.contact')}</h4>
             
             <div className="flex flex-col gap-4 text-sm text-gray-400">
               
@@ -127,7 +129,7 @@ export const Footer = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
           
           <div className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} <span className="font-semibold text-gray-300">Mavedda</span>. All rights reserved.
+            © {new Date().getFullYear()} <span className="font-semibold text-gray-300">Mavedda</span>. {t('footer.bottom.rights')}
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
@@ -156,11 +158,11 @@ export const Footer = () => {
               </Link>
               <span className="text-gray-700">|</span>
             </div>
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
-            <Link href="#" className="hover:text-white transition-colors">Cookie Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Security</Link>
-            <Link href="#" className="hover:text-white transition-colors">RSS Feed</Link>
+            <Link href="#" className="hover:text-white transition-colors">{t('footer.bottom.privacy')}</Link>
+            <Link href="#" className="hover:text-white transition-colors">{t('footer.bottom.terms')}</Link>
+            <Link href="#" className="hover:text-white transition-colors">{t('footer.bottom.cookies')}</Link>
+            <Link href="#" className="hover:text-white transition-colors">{t('footer.bottom.security')}</Link>
+            <Link href="#" className="hover:text-white transition-colors">{t('footer.bottom.rss')}</Link>
           </div>
 
         </div>

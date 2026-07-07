@@ -105,5 +105,39 @@
     "title2": "großes Projekt?",
     "desc": "Nennen Sie uns Ihre größte, risikoreichste operative Herausforderung. Wir liefern Ihnen in Wochen eine produktionsreife Technologielösung.",
     "button": "Projekt starten"
+  },
+  "footer": {
+    "desc": "KI-gestützte Plattform für schlüsselfertige Softwarelösungen, einschließlich Web, Mobile, Backend-Systeme und spezialisierte KI-Dienste.",
+    "product": {
+      "title": "Produkt",
+      "overview": "Übersicht",
+      "howItWorks": "Wie es funktioniert",
+      "capabilities": "Funktionen",
+      "dashboard": "Dashboard"
+    },
+    "solutions": {
+      "title": "Lösungen",
+      "aiServices": "KI-Dienste",
+      "webDev": "Webentwicklung",
+      "mobileApp": "Mobile Apps",
+      "backend": "Backend-Systeme",
+      "turnkey": "Schlüsselfertige Projekte"
+    },
+    "company": {
+      "title": "Unternehmen",
+      "about": "Über uns",
+      "mission": "Unsere Mission",
+      "blog": "Unser Blog",
+      "careers": "Karriere"
+    },
+    "contact": "Kontakt",
+    "bottom": {
+      "rights": "Alle Rechte vorbehalten.",
+      "privacy": "Datenschutzerklärung",
+      "terms": "Nutzungsbedingungen",
+      "cookies": "Cookie-Richtlinie",
+      "security": "Sicherheit",
+      "rss": "RSS-Feed"
+    }
   }
 }
