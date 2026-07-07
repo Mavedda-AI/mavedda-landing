@@ -1,10 +1,31 @@
-import React from 'react';
+"use client";
+
+import React, {useEffect, useState} from 'react';
 import Link from 'next/link';
 import {Button} from '@/components/ui/Button';
 
 export const Header = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="w-full flex flex-col z-50 absolute top-0 left-0 right-0">
+    <header 
+      className={`w-full flex flex-col z-50 fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out ${
+        isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'
+      }`}
+    >
       {/* Top Banner */}
       <div className="w-full bg-[#111111] text-gray-300 py-2.5 px-4 text-xs sm:text-sm flex justify-center items-center gap-2 border-b border-[#222]">
         <span>Swish AI is now part of Unframe. Learn more about the acquisition.</span>
