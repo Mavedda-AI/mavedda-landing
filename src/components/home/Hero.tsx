@@ -2,57 +2,78 @@ import React from 'react';
 
 export const Hero = () => {
   return (
-    <section className="section hero-dark u-overflow-clip"><div className="w-layout-blockcontainer container w-container"><div className="hero-layout"><h1 className="heading-underline-copy is-centered max-width-110 heading-underline is-white u-m-b-30 u-text-wrap-balance">Turn your most critical operations AI-native</h1><h3 className="heading-underline-copy is-centered max-width-110 heading-underline is-white u-m-b-30 u-text-wrap-balance">Managed AI transformation tailored to how your enterprise operates</h3><div className="hero-features-upd u-color-white u-m-b-48 hp"><div className="checkmark-row"><div className="u-text-wrap-balance">No upfront cost. No FDE required. Full agent governance.</div></div></div><div className="hero-cta-group u-m-b-64"><a href="/demo" data-wf--button--variant="white" className="btn-gradient-wrapper w-variant-e905cc6b-790b-61a3-a2bf-b0b588958d62 w-inline-block"><div className="btn-txt">Let&#x27;s connect</div><div className="btn-gradient"></div></a><a href="/customers" data-wf--button--variant="black-with-outline" className="btn-gradient-wrapper w-variant-7c699997-615a-b253-c65b-971825fd1318 w-inline-block"><div className="btn-txt">See our customers</div><div className="btn-gradient w-variant-7c699997-615a-b253-c65b-971825fd1318"></div></a></div><div className="hero-home-bg u-m-b-64"><img src="https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/69f47187219545bf5410b5e4_bg-hero-home-2c.webp" loading="lazy" width="1080" alt="" className="hero-home-bg-img"/></div><div className="hero-logo-marquee"><section className="section-marqee-dark"><div className="code-embed-6 w-embed w-script"><style dangerouslySetInnerHTML={{ __html: `
-  .marquee{overflow:hidden!important;opacity:0;transition:opacity .6s ease}
-  .marquee.is-ready{opacity:1}
-`}} />
-  <script dangerouslySetInnerHTML={{ __html: `
-    (function(){
-      function init(){
-        document.querySelectorAll(".marquee__list").forEach(function(list){
-          if(list.dataset.cloned==="1") return;
-          list.dataset.cloned="1";
+    <section className="relative w-full bg-[#111] overflow-hidden pt-32 pb-16 lg:pt-48 lg:pb-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+        
+        {/* Headlines */}
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 max-w-4xl text-balance">
+          Turn your most critical operations AI-native
+        </h1>
+        
+        <h3 className="text-xl md:text-2xl text-gray-300 font-medium mb-10 max-w-3xl text-balance">
+          Managed AI transformation tailored to how your enterprise operates
+        </h3>
+        
+        {/* Features list */}
+        <div className="flex items-center justify-center gap-2 text-sm md:text-base text-gray-400 mb-12">
+          <span>No upfront cost.</span>
+          <span className="w-1 h-1 rounded-full bg-gray-500"></span>
+          <span>No FDE required.</span>
+          <span className="w-1 h-1 rounded-full bg-gray-500"></span>
+          <span>Full agent governance.</span>
+        </div>
 
-          /* force flex row */
-          list.style.cssText="display:flex!important;flex-wrap:nowrap!important;width:max-content!important;will-change:transform!important;";
-          Array.from(list.children).forEach(function(c){c.style.flexShrink="0"});
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center gap-4 mb-20">
+          <a href="/demo" className="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+            Let&#39;s connect
+          </a>
+          <a href="/customers" className="bg-transparent text-white border border-gray-600 hover:border-gray-400 hover:bg-white/5 px-8 py-3 rounded-full font-semibold transition-all">
+            See our customers
+          </a>
+        </div>
+      </div>
 
-          /* wait for images inside the list */
-          var imgs=list.querySelectorAll("img");
-          var loaded=0, total=imgs.length||1;
-          function onReady(){
-            var setW=list.scrollWidth;
-            var viewW=window.innerWidth;
-            /* enough copies so there's always a full screen + spare */
-            var copies=Math.ceil(viewW/setW)+1;
-            var items=Array.from(list.children);
-            for(var c=0;c<copies;c++){
-              items.forEach(function(n){list.appendChild(n.cloneNode(true))});
-            }
-            /* rAF loop — pixel perfect */
-            var pos=0,speed=0.5;
-            (function tick(){
-              pos-=speed;
-              if(pos<=-setW) pos+=setW;
-              list.style.transform="translateX("+pos+"px)";
-              requestAnimationFrame(tick);
-            })();
-          }
+      {/* Hero Background Image with glowing cube */}
+      <div className="relative w-full max-w-7xl mx-auto mt-[-100px] md:mt-[-150px] lg:mt-[-250px] z-0">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-transparent z-10 h-full w-full"></div>
+        <img 
+          src="https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/69f47187219545bf5410b5e4_bg-hero-home-2c.webp" 
+          alt="Glowing Cube on Mountains" 
+          className="w-full object-cover opacity-80"
+        />
+      </div>
 
-          imgs.forEach(function(img){
-            if(img.complete){loaded++;return}
-            img.loading="eager";
-            img.onload=img.onerror=function(){if(++loaded>=total)onReady()};
-          });
-          if(loaded>=total) onReady();
-        });
-
-        document.querySelectorAll(".marquee").forEach(function(m){m.classList.add("is-ready")});
-      }
-
-      if(document.readyState==="complete") init();
-      else window.addEventListener("load",init);
-    })();
-  `}} /></div><div className="marquee-dark"><div className="marquee__track logo-animate is-autoheight"><div className="marquee__track is-autoheight w-dyn-list"><div role="list" className="marquee__list w-dyn-items"><div role="listitem" className="marquee-cms-item w-dyn-item"><a href="#" className="marquee__item w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/6a3d57193f68110f0bde37f0_Q4%20Designs%20(1).png" alt="" className="marquee-logo-img is-inverted"/></a></div><div role="listitem" className="marquee-cms-item w-dyn-item"><a href="#" className="marquee__item w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69de8fef8dc2b7910b55870f_freed-people.avif" alt="" className="marquee-logo-img is-inverted"/></a></div><div role="listitem" className="marquee-cms-item w-dyn-item"><a href="#" className="marquee__item w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69d953cca32ab48f84d91b25_Avison%20Young.avif" alt="" className="marquee-logo-img is-inverted"/></a></div><div role="listitem" className="marquee-cms-item w-dyn-item"><a href="#" className="marquee__item w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69d9535c8240ca3015040341_Acora.avif" alt="" className="marquee-logo-img is-inverted"/></a></div><div role="listitem" className="marquee-cms-item w-dyn-item"><a href="#" className="marquee__item w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bd88fe5e73969379501382_MasterTel.avif" alt="" className="marquee-logo-img is-inverted"/></a></div><div role="listitem" className="marquee-cms-item w-dyn-item"><a href="#" className="marquee__item w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bd63f9981fc259848e19aa_DG.avif" alt="" className="marquee-logo-img is-inverted"/></a></div><div role="listitem" className="marquee-cms-item w-dyn-item"><a href="#" className="marquee__item w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bd4c6f49ef28bc2e597483_Nzz.avif" alt="" className="marquee-logo-img is-inverted"/></a></div><div role="listitem" className="marquee-cms-item w-dyn-item"><a href="#" className="marquee__item w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bc2b8dbd81a37afa88634f_Cushman.avif" alt="" className="marquee-logo-img is-inverted"/></a></div><div role="listitem" className="marquee-cms-item w-dyn-item"><a href="#" className="marquee__item w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bd4c8a734dc85c8e7ef63e_Climb.avif" alt="" className="marquee-logo-img is-inverted"/></a></div><div role="listitem" className="marquee-cms-item w-dyn-item"><a href="#" className="marquee__item w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bd4c906794dd4c7691bcb9_AST.avif" alt="" className="marquee-logo-img is-inverted"/></a></div><div role="listitem" className="marquee-cms-item w-dyn-item"><a href="#" className="marquee__item w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bd4c9545d050ae54e9713f_Armis.avif" alt="" className="marquee-logo-img is-inverted"/></a></div></div></div></div><div className="fader-dark right"></div><div className="fader-dark"></div></div></section></div></div></div></section>
+      {/* Marquee Section */}
+      <div className="relative w-full border-t border-gray-800 bg-[#111] py-10 overflow-hidden">
+        {/* Gradient overlays for marquee */}
+        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-[#111] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-[#111] to-transparent z-10 pointer-events-none"></div>
+        
+        {/* Marquee track */}
+        <div className="flex w-max animate-marquee">
+          {/* First set of logos */}
+          <div className="flex items-center gap-16 px-8">
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/6a3d57193f68110f0bde37f0_Q4%20Designs%20(1).png" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69de8fef8dc2b7910b55870f_freed-people.avif" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69d953cca32ab48f84d91b25_Avison%20Young.avif" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69d9535c8240ca3015040341_Acora.avif" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bd88fe5e73969379501382_MasterTel.avif" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bd63f9981fc259848e19aa_DG.avif" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bd4c6f49ef28bc2e597483_Nzz.avif" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+          </div>
+          {/* Duplicate set for seamless looping */}
+          <div className="flex items-center gap-16 px-8">
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/6a3d57193f68110f0bde37f0_Q4%20Designs%20(1).png" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69de8fef8dc2b7910b55870f_freed-people.avif" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69d953cca32ab48f84d91b25_Avison%20Young.avif" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69d9535c8240ca3015040341_Acora.avif" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bd88fe5e73969379501382_MasterTel.avif" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bd63f9981fc259848e19aa_DG.avif" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+            <img src="https://cdn.prod.website-files.com/66e869dc4d7e3c951a23214f/69bd4c6f49ef28bc2e597483_Nzz.avif" className="h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Logo" />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
