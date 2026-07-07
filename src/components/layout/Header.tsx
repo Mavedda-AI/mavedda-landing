@@ -13,15 +13,15 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
 
-  // Lock body scroll when header is visible at the top
+  // Lock body scroll ONLY when mobile menu is open
   useEffect(() => {
-    if (!isHidden && window.scrollY <= 0) {
+    if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
     }
     return () => { document.body.style.overflow = ''; };
-  }, [isHidden]);
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     // Handle Desktop scroll wheel
