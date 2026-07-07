@@ -1,85 +1,94 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer id="iletisim" className="bg-[#050505] text-white border-t border-white/5 pt-24 pb-12">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-          <div className="col-span-1 lg:col-span-2">
-            <Link href="/" className="text-3xl font-bold tracking-tighter mb-6 block">
-              MAVEDDA
-            </Link>
-            <p className="text-white/60 max-w-sm mb-8 leading-relaxed">
-              Mavedda, fikirlerinizi uçtan uca dijital ürünlere dönüştüren teknoloji üretim üssüdür. Geleceği birlikte inşa edelim.
-            </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+    <footer className="w-full bg-black text-white py-20 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16 md:gap-8">
+        
+        {/* Left Column */}
+        <div className="flex flex-col gap-16 flex-1">
+          {/* Company Links */}
+          <div>
+            <h4 className="text-[12px] md:text-[14px] font-mono tracking-widest text-white/50 mb-6 uppercase">Şirket</h4>
+            <ul className="flex flex-col gap-4 text-[18px] md:text-[20px]">
+              <li><Link href="#" className="hover:underline underline-offset-4 decoration-white/30">Hakkımızda</Link></li>
+              <li><Link href="#" className="hover:underline underline-offset-4 decoration-white/30">Kariyer</Link></li>
+              <li><Link href="#" className="hover:underline underline-offset-4 decoration-white/30">Projeler</Link></li>
+              <li><Link href="#" className="hover:underline underline-offset-4 decoration-white/30">Etkinlikler</Link></li>
+              <li><Link href="#" className="hover:underline underline-offset-4 decoration-white/30">Uyumluluk</Link></li>
+              <li><Link href="#" className="hover:underline underline-offset-4 decoration-white/30">Destek Merkezi</Link></li>
+              <li><Link href="#" className="hover:underline underline-offset-4 decoration-white/30">Yatırımcılar</Link></li>
+            </ul>
+          </div>
+          
+          {/* Partnership Inquiries */}
+          <div>
+            <h4 className="text-[12px] md:text-[14px] font-mono tracking-widest text-white/50 mb-6 uppercase">İşbirliği Talepleri</h4>
+            <a href="mailto:partnerships@mavedda.com" className="text-[18px] md:text-[20px] hover:underline underline-offset-4 decoration-white/30">
+              partnerships@mavedda.com
+            </a>
+          </div>
+
+          {/* Press Inquiries */}
+          <div>
+            <h4 className="text-[12px] md:text-[14px] font-mono tracking-widest text-white/50 mb-6 uppercase">Basın İletişimi</h4>
+            <div className="flex flex-col gap-4 text-[18px] md:text-[20px]">
+              <a href="mailto:press@mavedda.com" className="hover:underline underline-offset-4 decoration-white/30">
+                press@mavedda.com
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-              </a>
+              <Link href="#" className="hover:underline underline-offset-4 decoration-white/30">
+                Medya kitini indir
+              </Link>
             </div>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-6">Şirket</h4>
-            <ul className="space-y-4 text-white/60">
-              <li><Link href="#hizmetler" className="hover:text-white transition-colors">Hakkımızda</Link></li>
-              <li><Link href="#hizmetler" className="hover:text-white transition-colors">Neler Yapıyoruz?</Link></li>
-              <li><Link href="#projeler" className="hover:text-white transition-colors">Projeler</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Kariyer</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-6">İletişim</h4>
-            <ul className="space-y-4 text-white/60">
-              <li>
-                <a href="mailto:hello@mavedda.com" className="hover:text-white transition-colors flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                  hello@mavedda.com
-                </a>
-              </li>
-              <li>
-                <span className="flex items-start gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-1 shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                  İstanbul, Türkiye
-                </span>
-              </li>
-            </ul>
           </div>
         </div>
 
-        <div className="pt-24 flex flex-col">
-          {/* Massive Text */}
-          <div className="w-full mb-10">
-            <h2 className="text-[18vw] md:text-[14vw] leading-none font-medium tracking-tight text-white mb-4 -ml-1 md:-ml-2">
-              Mavedda
-            </h2>
+        {/* Right Column */}
+        <div className="flex flex-col gap-16 flex-1 md:pl-20">
+          {/* Follow Us */}
+          <div>
+            <h4 className="text-[12px] md:text-[14px] font-mono tracking-widest text-white/50 mb-6 uppercase">Bizi Takip Edin</h4>
+            <ul className="flex flex-col gap-4 text-[18px] md:text-[20px]">
+              <li><a href="#" className="hover:underline underline-offset-4 decoration-white/30">LinkedIn</a></li>
+              <li><a href="#" className="hover:underline underline-offset-4 decoration-white/30">Instagram</a></li>
+              <li><a href="#" className="hover:underline underline-offset-4 decoration-white/30">Glassdoor</a></li>
+              <li><a href="#" className="hover:underline underline-offset-4 decoration-white/30">Facebook</a></li>
+              <li><a href="#" className="hover:underline underline-offset-4 decoration-white/30">Medium</a></li>
+              <li><a href="#" className="hover:underline underline-offset-4 decoration-white/30">X</a></li>
+            </ul>
           </div>
-          
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 text-sm text-white/50">
-            <div className="flex items-center gap-4">
-              {/* Simple logo circle matching the Bending Spoons cookie/logo icon */}
-              <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-bold text-white">
-                M
-              </div>
-              <span className="italic text-[#D3EFAB]">Geleceği tasarlıyoruz.</span>
-            </div>
-            
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
-              <p>© {new Date().getFullYear()} Mavedda Tech. Tüm hakları saklıdır.</p>
-              <div className="flex gap-6">
-                <Link href="#" className="hover:text-white transition-colors">Gizlilik Politikası</Link>
-                <Link href="#" className="hover:text-white transition-colors">Kullanım Şartları</Link>
-              </div>
+
+          {/* Offices */}
+          <div>
+            <h4 className="text-[12px] md:text-[14px] font-mono tracking-widest text-white/50 mb-6 uppercase">Ofisler</h4>
+            <div className="flex flex-col gap-4 text-[16px] md:text-[18px] text-white/80 leading-relaxed">
+              <p>Quartier Industriel Ouled Saleh Pro. Nouaceur, Casablanca, Morocco</p>
             </div>
           </div>
+        </div>
+
+      </div>
+
+      {/* Bottom Section */}
+      <div className="max-w-7xl mx-auto mt-24 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-end gap-12">
+        <div className="flex flex-col gap-6 text-[12px] md:text-[14px] text-white/50 max-w-[600px]">
+          <p>
+            © Mavedda | Quartier Industriel Ouled Saleh Pro. Nouaceur, Casablanca, Morocco
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
+            <Link href="#" className="hover:text-white transition-colors">Gizlilik ve çerez politikası</Link>
+            <Link href="#" className="hover:text-white transition-colors">Çerez tercihleri</Link>
+          </div>
+        </div>
+
+        {/* Massive Logo & Slogan */}
+        <div className="flex flex-col items-start gap-0 mt-8 mb-4">
+          <h1 className="text-[120px] md:text-[200px] lg:text-[280px] font-medium tracking-tighter leading-none -ml-2 md:-ml-4">
+            Mavedda
+          </h1>
+          <p className="text-[#d4ff8f] text-[24px] md:text-[32px] font-serif italic tracking-tight mt-[-10px] md:mt-[-20px] -ml-1 md:-ml-3">
+            Sıradan olsaydık, Mavedda olamazdık.
+          </p>
         </div>
       </div>
     </footer>

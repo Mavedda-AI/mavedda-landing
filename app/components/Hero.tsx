@@ -1,11 +1,13 @@
 export default function Hero() {
   const baseItems = [
-    { name: "SalutBabe", bg: "bg-bs-pink", id: 1 },
-    { name: "Kripto App", bg: "bg-bs-blue", id: 2 },
-    { name: "SmartFit AI", bg: "bg-bs-green", id: 3 },
-    { name: "B2B Cloud", bg: "bg-bs-purple", id: 4 },
-    { name: "Finans Portalı", bg: "bg-bs-orange", id: 5 },
-    { name: "Oyun Stüdyosu", bg: "bg-bs-yellow", id: 6 },
+    { name: "SalutBabe", category: "Sosyal Platform", bg: "bg-bs-pink", id: 1 },
+    { name: "GelKurye", category: "E-Ticaret & Lojistik", bg: "bg-bs-blue", id: 2 },
+    { name: "IoT Platform", category: "Endüstriyel IoT", bg: "bg-bs-green", id: 3 },
+    { name: "Roll Call Sys", category: "Eğitim Teknolojisi", bg: "bg-bs-purple", id: 4 },
+    { name: "TFEncryption", category: "Siber Güvenlik", bg: "bg-bs-orange", id: 5 },
+    { name: "Kripto Cüzdan", category: "Web3 & Fintech", bg: "bg-bs-yellow", id: 6 },
+    { name: "B2B Cloud", category: "Kurumsal Çözümler", bg: "bg-bs-pink", id: 7 },
+    { name: "SmartFit AI", category: "Sağlık Teknolojisi", bg: "bg-bs-green", id: 8 },
   ];
   
   const carouselItems = [...baseItems, ...baseItems.map(item => ({ ...item, id: item.id + 10 }))];
@@ -16,37 +18,40 @@ export default function Hero() {
         <h1 className="px-4 text-center text-[38px] leading-[1.05] text-white md:px-0 md:text-[58px] lg:text-[64px] tracking-tight font-medium">
           Geleceğin <br />
           teknolojilerini <br />
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-x-3 md:gap-x-4">
-            <em className="font-serif tracking-tighter text-[#72E5FF] italic text-[1.25em] font-light">tasarlıyor</em>
+          <div className="mt-4 flex flex-wrap items-baseline justify-center gap-x-3 md:gap-x-4">
+            <em className="font-serif tracking-tighter text-[#72E5FF] italic text-[1.1em] font-light">tasarlıyor</em>
             <span>ve</span>
-            <em className="font-serif tracking-tighter text-[#D3EFAB] italic text-[1.25em] font-light">geliştiriyoruz</em>
+            <em className="font-serif tracking-tighter text-[#D3EFAB] italic text-[1.1em] font-light">geliştiriyoruz</em>
           </div>
         </h1>
       </div>
 
       {/* 3D Carousel Section */}
       <div 
-        className="relative mt-16 md:mt-24 w-full h-[400px] flex justify-center pointer-events-none"
+        className="relative mt-24 md:mt-40 w-full h-[360px] flex justify-center pointer-events-none"
         style={{ 
           perspective: '1200px',
           WebkitMaskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
           maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)'
         }}
       >
-        <div className="carousel-track relative w-[280px] h-[380px] origin-center scale-[0.75] md:scale-100">
+        <div className="carousel-track relative w-[260px] h-[300px] origin-center scale-[0.75] md:scale-100">
           {carouselItems.map((item, i) => {
             const angle = (i / carouselItems.length) * 360;
             return (
               <div
                 key={item.id}
-                className={`absolute inset-0 flex items-center justify-center p-6 rounded-[32px] text-3xl font-extrabold tracking-tight text-black text-center ${item.bg}`}
+                className={`absolute inset-0 flex items-center justify-center p-6 rounded-[32px] text-center ${item.bg}`}
                 style={{
-                  transform: `rotateY(${angle}deg) translateZ(580px)`,
+                  transform: `rotateY(${angle}deg) translateZ(690px)`,
                   backfaceVisibility: 'hidden',
                   WebkitBackfaceVisibility: 'hidden'
                 }}
               >
-                <div className="relative z-10">{item.name}</div>
+                <div className="relative z-10 flex flex-col items-center gap-2">
+                  <span className="text-black text-sm font-bold uppercase tracking-wider opacity-90">{item.category}</span>
+                  <span className="text-black text-3xl font-black tracking-tight">{item.name}</span>
+                </div>
               </div>
             );
           })}

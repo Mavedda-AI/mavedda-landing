@@ -52,17 +52,30 @@ body {
   animation: spin-3d 30s linear infinite;
 }
 
-/* 3D Carousel */
-@keyframes spinCarousel {
-  from {
-    transform: translateZ(-580px) rotateY(0deg);
-  }
-  to {
-    transform: translateZ(-580px) rotateY(-360deg);
-  }
-}
-
 .carousel-track {
   animation: spinCarousel 70s linear infinite;
   transform-style: preserve-3d;
+}
+
+/* 3D Carousel */
+@keyframes spinCarousel {
+  from {
+    transform: translateZ(-690px) rotateY(0deg);
+  }
+  to {
+    transform: translateZ(-690px) rotateY(-360deg);
+  }
+}
+
+@keyframes image-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1.0);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+@utility animate-image-float {
+  animation: image-float 6s ease-in-out infinite;
 }

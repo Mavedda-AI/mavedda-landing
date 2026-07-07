@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description: "Mavedda bir teknoloji üretim üssüdür. Dünya standartlarında uzmanlığımızla, fikirlerinizi milyonlara ulaşan mobil uygulamalara dönüştürüyoruz.",
 };
 
+import CookieConsent from "./components/CookieConsent";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,7 +30,10 @@ export default function RootLayout({
       lang="tr"
       className={`${instrumentSans.variable} ${instrumentSerif.variable} antialiased bg-black text-white`}
     >
-      <body className="min-h-screen flex flex-col font-sans">{children}</body>
+      <body className="min-h-screen flex flex-col font-sans">
+        {children}
+        <CookieConsent />
+      </body>
     </html>
   );
 }
