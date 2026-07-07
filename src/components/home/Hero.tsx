@@ -36,7 +36,7 @@ export const Hero = () => {
       </div>
 
       {/* Hero Background Image with glowing cube */}
-      <div className="relative w-full max-w-[1440px] mx-auto mt-[-80px] md:mt-[-120px] lg:mt-[-200px] z-0">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1440px] z-0 pointer-events-none flex justify-center items-end">
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 h-full w-full pointer-events-none"></div>
         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
         <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
