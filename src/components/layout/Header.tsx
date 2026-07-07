@@ -32,8 +32,8 @@ export const Header = () => {
       <TopBanner />
 
       {/* Main Nav */}
-      <div className="w-full bg-black/50 backdrop-blur-lg border-b border-white/10 text-white">
-        <div className="max-w-[1400px] mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="w-full bg-[#ebebeb] text-[#111] border-b border-black/5">
+        <div className="max-w-[1400px] mx-auto px-6 h-[60px] flex items-center justify-between">
           
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -41,26 +41,25 @@ export const Header = () => {
             <img 
               src="https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/66b4795caff3f505c5c51c6c_Unframe%20Logo%20-%20Refined%20Palette%201.svg" 
               alt="Unframe Logo" 
-              className="h-7 w-auto"
+              className="h-[22px] w-auto"
             />
           </Link>
 
           {/* Nav Links */}
           <nav className="hidden lg:flex items-center gap-2">
-            {navigationData.simpleLinks.map((link) => (
-              <Link key={link.label} href={link.href} className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors">
-                {link.label}
-              </Link>
-            ))}
-            
             {Object.entries(navigationData.megaMenus).map(([key, data]) => (
               <MegaMenu key={key} label={key} data={data} />
+            ))}
+            {navigationData.simpleLinks.map((link) => (
+              <Link key={link.label} href={link.href} className="px-4 py-2 text-[13px] font-medium text-[#222] hover:text-black transition-colors">
+                {link.label}
+              </Link>
             ))}
           </nav>
 
           {/* CTA */}
           <div className="flex items-center gap-4">
-            <Button variant="primary" size="md">
+            <Button variant="primary" size="md" className="bg-[#222] text-white hover:bg-black rounded-full text-[13px] font-medium h-[36px] px-5">
               Let&apos;s connect
             </Button>
           </div>

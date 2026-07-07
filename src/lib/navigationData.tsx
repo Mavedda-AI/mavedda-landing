@@ -43,8 +43,8 @@ export type NavigationConfig = {
 
 export const navigationData: NavigationConfig = {
   simpleLinks: [
-    { label: "About", href: "/about" },
-    { label: "Blog", href: "/blog" }
+    { label: "Company", href: "/company" },
+    { label: "Security", href: "/security" }
   ],
   megaMenus: {
     "Platform": {

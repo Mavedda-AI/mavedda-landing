@@ -19,7 +19,7 @@ export const MegaMenu = ({ label, data }: MegaMenuProps) => {
       onMouseLeave={() => setIsOpen(false)}
     >
       <button 
-        className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
+        className="flex items-center gap-1.5 px-4 py-2 text-[13px] font-medium text-[#222] hover:text-black transition-colors"
       >
         {label}
         <svg 

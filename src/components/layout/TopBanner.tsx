@@ -7,7 +7,7 @@ export const TopBanner = () => {
       <span>Swish AI is now part of Unframe. Learn more about the acquisition.</span>
       <Link 
         href="https://www.unframe.ai/blog/swish-ai-is-now-part-of-unframe" 
-        className="font-medium text-white hover:text-gray-300 transition-colors underline underline-offset-4 flex items-center gap-1"
+        className="font-medium text-white hover:text-gray-300 transition-colors flex items-center gap-1 ml-1"
       >
         Learn more
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
