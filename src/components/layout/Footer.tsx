@@ -1,7 +1,15 @@
-import React from 'react';
+'use client';
+
+import React, {useState} from 'react';
 import Link from 'next/link';
 
 export const Footer = () => {
+  const [openSection, setOpenSection] = useState<string | null>(null);
+
+  const toggleSection = (section: string) => {
+    setOpenSection(openSection === section ? null : section);
+  };
+
   return (
     <footer className="w-full bg-black text-white pt-24 pb-8 px-6 border-t border-[#222] font-sans">
       <div className="max-w-[1400px] mx-auto">
@@ -24,9 +32,17 @@ export const Footer = () => {
           </div>
           
           {/* Column 2: Product (col-span-2) */}
-          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-6 lg:border-l lg:border-white/10 lg:pl-10">
-            <h4 className="text-white font-semibold tracking-wide">Product</h4>
-            <ul className="flex flex-col gap-4 text-sm">
+          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-0 md:gap-6 lg:border-l lg:border-white/10 lg:pl-10 border-b border-white/10 md:border-b-0 pb-4 md:pb-0">
+            <button 
+              onClick={() => toggleSection('product')}
+              className="flex items-center justify-between w-full md:cursor-default py-4 md:py-0"
+            >
+              <h4 className="text-white font-semibold tracking-wide">Product</h4>
+              <span className="md:hidden text-gray-400">
+                {openSection === 'product' ? '−' : '+'}
+              </span>
+            </button>
+            <ul className={`flex flex-col gap-4 text-sm overflow-hidden transition-all duration-300 ${openSection === 'product' ? 'max-h-64 pt-2' : 'max-h-0 md:max-h-none'}`}>
               <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Overview</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">How it Works</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Capabilities</Link></li>
@@ -35,9 +51,17 @@ export const Footer = () => {
           </div>
 
           {/* Column 3: Solutions (col-span-2) */}
-          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-6 lg:border-l lg:border-white/10 lg:pl-10">
-            <h4 className="text-white font-semibold tracking-wide">Solutions</h4>
-            <ul className="flex flex-col gap-4 text-sm">
+          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-0 md:gap-6 lg:border-l lg:border-white/10 lg:pl-10 border-b border-white/10 md:border-b-0 pb-4 md:pb-0">
+            <button 
+              onClick={() => toggleSection('solutions')}
+              className="flex items-center justify-between w-full md:cursor-default py-4 md:py-0"
+            >
+              <h4 className="text-white font-semibold tracking-wide">Solutions</h4>
+              <span className="md:hidden text-gray-400">
+                {openSection === 'solutions' ? '−' : '+'}
+              </span>
+            </button>
+            <ul className={`flex flex-col gap-4 text-sm overflow-hidden transition-all duration-300 ${openSection === 'solutions' ? 'max-h-64 pt-2' : 'max-h-0 md:max-h-none'}`}>
               <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Web Development</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Mobile Apps</Link></li>
@@ -47,9 +71,17 @@ export const Footer = () => {
           </div>
 
           {/* Column 4: Company (col-span-2) */}
-          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-6 lg:border-l lg:border-white/10 lg:pl-10">
-            <h4 className="text-white font-semibold tracking-wide">Company</h4>
-            <ul className="flex flex-col gap-4 text-sm">
+          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-0 md:gap-6 lg:border-l lg:border-white/10 lg:pl-10 border-b border-white/10 md:border-b-0 pb-4 md:pb-0">
+            <button 
+              onClick={() => toggleSection('company')}
+              className="flex items-center justify-between w-full md:cursor-default py-4 md:py-0"
+            >
+              <h4 className="text-white font-semibold tracking-wide">Company</h4>
+              <span className="md:hidden text-gray-400">
+                {openSection === 'company' ? '−' : '+'}
+              </span>
+            </button>
+            <ul className={`flex flex-col gap-4 text-sm overflow-hidden transition-all duration-300 ${openSection === 'company' ? 'max-h-64 pt-2' : 'max-h-0 md:max-h-none'}`}>
               <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Our Mission</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Our Blog</Link></li>
@@ -58,7 +90,7 @@ export const Footer = () => {
           </div>
 
           {/* Column 5: Contact Us (col-span-2) */}
-          <div className="md:col-span-12 lg:col-span-2 flex flex-col gap-6 lg:border-l lg:border-white/10 lg:pl-10">
+          <div className="md:col-span-12 lg:col-span-2 flex flex-col gap-6 lg:border-l lg:border-white/10 lg:pl-10 pt-4 md:pt-0">
             <h4 className="text-white font-semibold tracking-wide">Contact Us</h4>
             
             <div className="flex flex-col gap-4 text-sm text-gray-400">

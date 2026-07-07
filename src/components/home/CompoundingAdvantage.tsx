@@ -1,9 +1,26 @@
-import React from 'react';
+'use client';
+
+import React, {useEffect, useRef} from 'react';
 import {Button} from '@/components/ui/Button';
 import {useTranslation} from "@/hooks/useTranslation";
 
 export const CompoundingAdvantage = () => {
   const { t } = useTranslation();
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // On mount, if it's mobile, scroll to the middle card
+    if (window.innerWidth < 768 && sliderRef.current) {
+      const slider = sliderRef.current;
+      const middleCard = slider.children[1] as HTMLElement;
+      if (middleCard) {
+        // Scroll so the middle card is centered
+        const scrollPos = middleCard.offsetLeft - (slider.clientWidth / 2) + (middleCard.clientWidth / 2);
+        slider.scrollTo({ left: scrollPos, behavior: 'smooth' });
+      }
+    }
+  }, []);
+
   return (
     <section className="w-full bg-white py-32 overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-6">
@@ -65,10 +82,13 @@ export const CompoundingAdvantage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          <div 
+            ref={sliderRef}
+            className="flex md:grid md:grid-cols-3 gap-8 items-stretch overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 md:pb-0"
+          >
             
             {/* Starter Plan */}
-            <div className="flex flex-col bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-xl transition-all duration-300">
+            <div className="flex flex-col bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-xl transition-all duration-300 min-w-[85vw] md:min-w-0 snap-center">
               <h4 className="text-xl font-bold text-gray-900 mb-2">{t('pricing.tier1.title')}</h4>
               <p className="text-gray-500 text-sm mb-6 h-10">{t('pricing.tier1.desc')}</p>
               <div className="mb-6">
@@ -99,7 +119,7 @@ export const CompoundingAdvantage = () => {
             </div>
 
             {/* Pro Plan (Highlighted) */}
-            <div className="flex flex-col bg-black rounded-3xl p-8 shadow-2xl relative transform md:-translate-y-4">
+            <div className="flex flex-col bg-black rounded-3xl p-8 shadow-2xl relative transform md:-translate-y-4 min-w-[85vw] md:min-w-0 snap-center">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#00c5ea] to-[#7800ff] text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase shadow-lg">
                 {t('pricing.tier2.badge')}
               </div>
@@ -133,7 +153,7 @@ export const CompoundingAdvantage = () => {
             </div>
 
             {/* Enterprise Plan */}
-            <div className="flex flex-col bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-xl transition-all duration-300">
+            <div className="flex flex-col bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-xl transition-all duration-300 min-w-[85vw] md:min-w-0 snap-center">
               <h4 className="text-xl font-bold text-gray-900 mb-2">{t('pricing.tier3.title')}</h4>
               <p className="text-gray-500 text-sm mb-6 h-10">{t('pricing.tier3.desc')}</p>
               <div className="mb-6">

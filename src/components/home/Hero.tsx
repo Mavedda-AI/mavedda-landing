@@ -57,21 +57,25 @@ export const Hero = () => {
           <div className="flex items-center gap-16 px-8">
             <img src="/assets/trusted-logo/logo-lebara.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
             <img src="/assets/trusted-logo/logo-onder.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
-            <img src="/assets/trusted-logo/logo-woma.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Mavedda" />
+            <img src="/assets/trusted-logo/logo-salutbabe.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Salutbabe" />
+            <img src="/assets/trusted-logo/logo-woma.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Woma" />
+            
             <img src="/assets/trusted-logo/logo-lebara.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
             <img src="/assets/trusted-logo/logo-onder.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
-            <img src="/assets/trusted-logo/logo-woma.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Mavedda" />
-            <img src="/assets/trusted-logo/logo-lebara.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
+            <img src="/assets/trusted-logo/logo-salutbabe.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Salutbabe" />
+            <img src="/assets/trusted-logo/logo-woma.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Woma" />
           </div>
           {/* Duplicate set for seamless looping */}
           <div className="flex items-center gap-16 px-8">
             <img src="/assets/trusted-logo/logo-lebara.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
             <img src="/assets/trusted-logo/logo-onder.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
-            <img src="/assets/trusted-logo/logo-woma.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Mavedda" />
+            <img src="/assets/trusted-logo/logo-salutbabe.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Salutbabe" />
+            <img src="/assets/trusted-logo/logo-woma.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Woma" />
+            
             <img src="/assets/trusted-logo/logo-lebara.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
             <img src="/assets/trusted-logo/logo-onder.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
-            <img src="/assets/trusted-logo/logo-woma.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Mavedda" />
-            <img src="/assets/trusted-logo/logo-lebara.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
+            <img src="/assets/trusted-logo/logo-salutbabe.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Salutbabe" />
+            <img src="/assets/trusted-logo/logo-woma.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Woma" />
           </div>
         </div>
       </div>
