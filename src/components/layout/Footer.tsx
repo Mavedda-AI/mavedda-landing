@@ -1,143 +1,109 @@
 import React from 'react';
 import Link from 'next/link';
-import {Button} from '@/components/ui/Button';
-
-const footerLinks = {
-  product: [
-    { label: 'Platform', href: '#' },
-    { label: 'Security', href: '#' },
-  ],
-  alternatives: [
-    { label: 'Build vs. Unframe', href: '#' },
-    { label: 'Build vs. Buy', href: '#' },
-  ],
-  company: [
-    { label: 'About', href: '#' },
-    { label: 'Locations', href: '#' },
-    { label: 'Careers', href: '#' },
-  ],
-  resources: [
-    { label: 'Blog', href: '#' },
-    { label: 'Resources', href: '#' },
-    { label: 'Customers', href: '#' },
-    { label: 'Workshop', href: '#' },
-  ],
-  support: [
-    { label: 'Customer Support', href: '#' },
-    { label: 'Partners', href: '#' },
-  ],
-  legal: [
-    { label: 'Legal', href: '#' },
-    { label: 'Cookie Settings', href: '#' },
-  ]
-};
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-black text-white pt-24 pb-8 px-6 border-t border-[#222]">
+    <footer className="w-full bg-black text-white pt-24 pb-8 px-6 border-t border-[#222] font-sans">
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 mb-20">
+        
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 mb-16">
           
-          {/* Left Column (Brand & Contact) */}
-          <div className="md:col-span-4 flex flex-col gap-6">
-            <Link href="/" className="flex items-center gap-1 font-heading text-3xl font-bold tracking-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">U</span>
-              nframe
+          {/* Column 1: Brand & Desc (col-span-3) */}
+          <div className="md:col-span-12 lg:col-span-3 flex flex-col gap-6">
+            <Link href="/" className="inline-block">
+              <img src="/assets/trusted-logo/logo-white.png" alt="Mavedda" className="h-10 object-contain" />
             </Link>
-            
-            <div className="flex items-center gap-4 text-white">
-              <Link href="#" className="hover:text-gray-400 transition-colors bg-white/10 p-2 rounded-full">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-              </Link>
-              <Link href="#" className="hover:text-gray-400 transition-colors bg-white/10 p-2 rounded-full">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-                </svg>
-              </Link>
-            </div>
-
-            <div>
-              <Button variant="primary" className="font-semibold text-black hover:bg-gray-200 bg-white">
-                Contact us
-              </Button>
-            </div>
-
-            {/* Badges (Placeholders) */}
-            <div className="flex items-center gap-3 mt-4 opacity-50">
-              <div className="w-12 h-12 rounded-full border border-gray-500 flex items-center justify-center text-[8px] text-center p-1 leading-tight">AICPA<br/>SOC</div>
-              <div className="w-10 h-12 border border-gray-500 rounded-md flex items-center justify-center text-[8px] text-center p-1 leading-tight">HIPAA<br/>COMPLIANT</div>
-              <div className="w-12 h-12 rounded-full border border-gray-500 flex items-center justify-center text-[10px] font-bold">ISO<br/><span className="text-[6px] font-normal">27001</span></div>
-              <div className="w-12 h-12 rounded-full border border-gray-500 flex items-center justify-center text-[10px] font-bold">ISO<br/><span className="text-[6px] font-normal">9001</span></div>
-            </div>
+            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+              AI-powered platform providing turnkey software solutions including web, mobile, backend systems, and specialized AI services.
+            </p>
+          </div>
+          
+          {/* Column 2: Product (col-span-2) */}
+          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-6">
+            <h4 className="text-white font-semibold tracking-wide">Product</h4>
+            <ul className="flex flex-col gap-4 text-sm">
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Overview</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">How it Works</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Capabilities</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Dashboard</Link></li>
+            </ul>
           </div>
 
-          {/* Right Columns */}
-          <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 text-sm">
+          {/* Column 3: Solutions (col-span-2) */}
+          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-6">
+            <h4 className="text-white font-semibold tracking-wide">Solutions</h4>
+            <ul className="flex flex-col gap-4 text-sm">
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Web Development</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Mobile Apps</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Backend Systems</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Turnkey Projects</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Company (col-span-2) */}
+          <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-6">
+            <h4 className="text-white font-semibold tracking-wide">Company</h4>
+            <ul className="flex flex-col gap-4 text-sm">
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Our Mission</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Our Blog</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 5: Contact Us (col-span-3) */}
+          <div className="md:col-span-12 lg:col-span-3 flex flex-col gap-6">
+            <h4 className="text-white font-semibold tracking-wide">Contact Us</h4>
             
-            <div className="flex flex-col gap-8">
-              <div>
-                <h4 className="text-gray-500 text-xs font-semibold mb-4 tracking-wider uppercase">Product</h4>
-                <ul className="flex flex-col gap-3">
-                  {footerLinks.product.map(link => (
-                    <li key={link.label}><Link href={link.href} className="text-gray-300 hover:text-white transition-colors">{link.label}</Link></li>
-                  ))}
-                </ul>
+            <div className="flex flex-col gap-4 text-sm text-gray-400">
+              
+              {/* Email */}
+              <div className="flex items-start gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500 mt-0.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:info@mavedda.com" className="hover:text-white transition-colors">info@mavedda.com</a>
               </div>
-              <div>
-                <h4 className="text-gray-500 text-xs font-semibold mb-4 tracking-wider uppercase">Alternatives</h4>
-                <ul className="flex flex-col gap-3">
-                  {footerLinks.alternatives.map(link => (
-                    <li key={link.label}><Link href={link.href} className="text-gray-300 hover:text-white transition-colors">{link.label}</Link></li>
-                  ))}
-                </ul>
-              </div>
-            </div>
 
-            <div>
-              <h4 className="text-gray-500 text-xs font-semibold mb-4 tracking-wider uppercase">Company</h4>
-              <ul className="flex flex-col gap-3">
-                {footerLinks.company.map(link => (
-                  <li key={link.label}><Link href={link.href} className="text-gray-300 hover:text-white transition-colors">{link.label}</Link></li>
-                ))}
-              </ul>
             </div>
-
-            <div>
-              <h4 className="text-gray-500 text-xs font-semibold mb-4 tracking-wider uppercase">Resources</h4>
-              <ul className="flex flex-col gap-3">
-                {footerLinks.resources.map(link => (
-                  <li key={link.label}><Link href={link.href} className="text-gray-300 hover:text-white transition-colors">{link.label}</Link></li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-8">
-              <div>
-                <h4 className="text-gray-500 text-xs font-semibold mb-4 tracking-wider uppercase">Support</h4>
-                <ul className="flex flex-col gap-3">
-                  {footerLinks.support.map(link => (
-                    <li key={link.label}><Link href={link.href} className="text-gray-300 hover:text-white transition-colors">{link.label}</Link></li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-gray-500 text-xs font-semibold mb-4 tracking-wider uppercase">Legal</h4>
-                <ul className="flex flex-col gap-3">
-                  {footerLinks.legal.map(link => (
-                    <li key={link.label}><Link href={link.href} className="text-gray-300 hover:text-white transition-colors">{link.label}</Link></li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            
           </div>
         </div>
 
-        <div className="pt-8 border-t border-[#222] text-xs text-gray-400">
-          © 2026 Unframe. All rights reserved.
+        {/* Socials & Pre-Footer Actions */}
+        <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
+          <div className="flex items-center gap-4 text-gray-400">
+            {/* Instagram */}
+            <a href="#" className="hover:text-white transition-colors">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            {/* Facebook */}
+            <a href="#" className="hover:text-white transition-colors">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            {/* LinkedIn */}
+            <a href="#" className="hover:text-white transition-colors">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
         </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+          
+          <div className="text-gray-500 text-sm">
+            © {new Date().getFullYear()} <span className="font-semibold text-gray-300">Mavedda</span>. All rights reserved.
+          </div>
+
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500">
+            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="#" className="hover:text-white transition-colors">Cookie Policy</Link>
+            <Link href="#" className="hover:text-white transition-colors">Security</Link>
+            <Link href="#" className="hover:text-white transition-colors">RSS Feed</Link>
+          </div>
+
+        </div>
+
       </div>
     </footer>
   );
