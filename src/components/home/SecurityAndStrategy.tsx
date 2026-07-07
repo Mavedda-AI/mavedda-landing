@@ -1,7 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+import {useTranslation} from "@/hooks/useTranslation";
 
 export const SecuritySection = () => {
+  const { t } = useTranslation();
   return (
     <div className="w-full bg-[#0a0a0a]">
       {/* Security Section */}
@@ -23,19 +25,19 @@ export const SecuritySection = () => {
             {/* Content Side */}
             <div className="flex-1 flex flex-col gap-8 w-full">
               <div className="flex flex-col gap-4">
-                <div className="text-[#00c5ea] font-semibold uppercase tracking-wide text-sm">Enterprise-grade by design</div>
+                <div className="text-[#00c5ea] font-semibold uppercase tracking-wide text-sm">{t('security.badge')}</div>
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
-                  Your data is always yours. <span className="text-[#00c5ea]">Always secure.</span>
+                  {t('security.title1')} <span className="text-[#00c5ea]">{t('security.title2')}</span>
                 </h2>
               </div>
               
               <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
-                Governed, auditable, and fully traceable AI — deployed within your enterprise boundaries.
+                {t('security.desc')}
               </p>
 
               <div>
                 <Link href="/security" className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-gray-900 bg-white rounded-full hover:bg-gray-100 hover:shadow-lg transition-all mt-4">
-                  How we keep it secure
+                  {t('security.button')}
                 </Link>
               </div>
             </div>
@@ -48,17 +50,18 @@ export const SecuritySection = () => {
 };
 
 export const StrategySection = () => {
+  const { t } = useTranslation();
   return (
     <div className="w-full bg-[#0a0a0a]">
       {/* AI Strategy Section */}
       <section className="w-full py-32 overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 flex flex-col items-center text-center gap-8">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
-            It's not build vs buy.<br/>
-            <span className="bg-gradient-to-r from-[#00c5ea] via-[#7800ff] to-[#ff9600] text-transparent bg-clip-text">It's a unified AI program.</span>
+            {t('strategy.title1')}<br/>
+            <span className="bg-gradient-to-r from-[#00c5ea] via-[#7800ff] to-[#ff9600] text-transparent bg-clip-text">{t('strategy.title2')}</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-3xl mt-4">
-            Your AI team focuses on what differentiates you. Unframe delivers the operational AI. All share the same context, knowledge, and governance. No silos. No reinventing the wheel.
+            {t('strategy.desc')}
           </p>
         </div>
       </section>

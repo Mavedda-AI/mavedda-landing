@@ -1,19 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
+import {useTranslation} from "@/hooks/useTranslation";
 
 export const Integrations = () => {
+  const { t } = useTranslation();
   return (
     <section className="w-full bg-[#f4f4f4] py-32 overflow-hidden border-y border-gray-200">
       <div className="max-w-[1280px] mx-auto px-6 flex flex-col items-center text-center gap-12">
         
         {/* Header */}
         <div className="flex flex-col items-center gap-6 max-w-3xl">
-          <div className="text-gray-500 font-semibold uppercase tracking-wide text-sm">Fits your stack</div>
+          <div className="text-gray-500 font-semibold uppercase tracking-wide text-sm">{t('integrations.badge')}</div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight">
-            Runs on anything.<br/>Integrates with everything.
+            {t('integrations.title1')}<br/>{t('integrations.title2')}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
-            Deep interoperability across ERPs, CRMs, cloud platforms, data warehouses, and legacy systems. Any cloud. On-prem. Any LLM.
+            {t('integrations.desc')}
           </p>
         </div>
 
@@ -29,7 +31,7 @@ export const Integrations = () => {
         {/* Action */}
         <div>
           <Link href="/integrations" className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white bg-gray-900 rounded-full hover:bg-black hover:shadow-lg transition-all">
-            See popular integrations
+            {t('integrations.button')}
           </Link>
         </div>
 

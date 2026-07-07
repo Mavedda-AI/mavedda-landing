@@ -1,7 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+import {useTranslation} from "@/hooks/useTranslation";
 
 export const CTASection = () => {
+  const { t } = useTranslation();
   return (
     <section className="w-full relative overflow-hidden bg-black border-t border-white/5">
       
@@ -26,16 +28,16 @@ export const CTASection = () => {
         {/* Content Side */}
         <div className="w-full lg:w-[55%] flex flex-col items-start text-left gap-6 pl-0 lg:pl-12">
           <h2 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white leading-[1.1]">
-            Bring AI into your<br/>operations. Fast.
+            {t('cta.title1')}<br/>{t('cta.title2')}
           </h2>
           
           <p className="text-base md:text-lg text-gray-300 max-w-lg font-medium leading-relaxed">
-            Tell us your hardest, highest-stakes operational challenge. We’ll provide a production-grade AI solution in days. Within weeks, see business impact.
+            {t('cta.desc')}
           </p>
           
           <div className="mt-4">
             <Link href="/demo" className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-black bg-white rounded-full hover:bg-gray-100 hover:scale-105 transition-all">
-              Let's connect
+              {t('cta.button')}
             </Link>
           </div>
         </div>

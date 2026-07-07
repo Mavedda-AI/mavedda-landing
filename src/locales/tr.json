@@ -2,5 +2,108 @@
   "announcement": {
     "text": "Anneden anneye güvenle. Salutbabe yayında",
     "button": "Daha fazla bilgi"
+  },
+  "hero": {
+    "badge": "Yapay Zeka Destekli Anahtar Teslim Yazılım ve Hizmetler",
+    "title1": "Akıllı yazılımlar geliştirin.",
+    "title2": "Daha hızlı yayınlayın.",
+    "subtitle": "Gerçek iş değeri yaratan uçtan uca yazılım geliştirme, mobil uygulamalar ve özel yapay zeka çözümleri için güvenilir teknoloji ortağınızız.",
+    "buttonPrimary": "Hemen Başlayalım",
+    "buttonSecondary": "Portfolyomuzu İnceleyin",
+    "trustedBy": "EN İYİLERİN TERCİHİ"
+  },
+  "metrics": {
+    "title": "Sektörler arası kanıtlanmış sonuçlar",
+    "item1": {
+      "value": "50+",
+      "label": "Tamamlanan Proje",
+      "desc": "Güçlü web ve mobil uygulamaları başarıyla hayata geçirdik."
+    },
+    "item2": {
+      "value": "3x",
+      "label": "Daha Hızlı Pazara Çıkış",
+      "desc": "Hazır yapay zeka modüllerimizle ürün lansmanınızı hızlandırıyoruz."
+    },
+    "item3": {
+      "value": "%99",
+      "label": "Müşteri Memnuniyeti",
+      "desc": "Güvene ve teslime dayalı uzun vadeli ortaklıklar."
+    },
+    "item4": {
+      "value": "7/24",
+      "label": "Özel Destek",
+      "desc": "Sistemleriniz için kesintisiz izleme ve bakım."
+    }
+  },
+  "security": {
+    "badge": "Kurumsal düzeyde güvenlik",
+    "title1": "Verileriniz daima size ait.",
+    "title2": "Daima güvende.",
+    "desc": "Kurumsal sınırlarınız içinde güvenli bir şekilde dağıtılan, ölçeklenebilir, denetlenebilir ve tamamen izlenebilir yazılım mimarileri kuruyoruz.",
+    "button": "Güvenlik standartlarımızı keşfedin"
+  },
+  "strategy": {
+    "title1": "Sadece yazılım değil,",
+    "title2": "Yapay Zeka geleceğinizi inşa ediyoruz.",
+    "desc": "Ekibiniz sizi farklı kılan özelliklere odaklansın. Biz de operasyonel teknolojiyi ve yapay zeka altyapınızı sağlayalım. Silo yok. Tekerleği yeniden icat etmek yok."
+  },
+  "compounding": {
+    "badge": "Ajans avantajı",
+    "title1": "Değer, her yeni sürümde",
+    "title2": "katlanarak artar",
+    "desc": "Çoğu ajans projeyi teslim edip gider. Biz kalıcı bir teknoloji ekosistemi kurarız. İlk MVP'niz haftalar içinde yayına girer. Bir sonraki özelliğiniz günler sürer.",
+    "point": "Geliştirmeler daha az zaman alır ve daha iyi performans gösterir çünkü teknik temeliniz giderek güçlenir.",
+    "highlight": "Müşterilerimizin %96'sı neden bir sonraki projelerinde bizimle kalıyor? Çünkü sizi kendimize kilitlemeden sonuç veriyoruz."
+  },
+  "pricing": {
+    "title": "Dijital geliştiriciler için esnek planlar",
+    "subtitle": "Güçlü yapay zeka modelleri entegrasyonundan, baştan sona özel anahtar teslim yazılımlara kadar, ihtiyaçlarınıza göre ölçekleniyoruz.",
+    "tier1": {
+      "title": "Yapay Zeka Danışmanlığı",
+      "desc": "Yapay zeka dönüşümünüz için stratejik yol haritası ve mimari planlama.",
+      "price": "$2,499",
+      "period": "/ay",
+      "feat1": "Teknik fizibilite çalışmaları",
+      "feat2": "Mimari tasarım",
+      "feat3": "MVP kapsam belirleme",
+      "feat4": "Haftalık danışmanlık seansları",
+      "button": "Hemen Başla"
+    },
+    "tier2": {
+      "badge": "En Popüler",
+      "title": "Özel Yapay Zeka Entegrasyonu",
+      "desc": "Mevcut sistemlerinize özel yapay zeka modellerini sorunsuz entegre edin.",
+      "price": "$4,999",
+      "period": "/ay",
+      "feat1": "Özel fine-tuning işlemleri",
+      "feat2": "API geliştirme ve entegrasyon",
+      "feat3": "Özel bulut altyapısı",
+      "feat4": "Öncelikli teknik destek",
+      "button": "İnşa Etmeye Başla"
+    },
+    "tier3": {
+      "title": "Anahtar Teslim Yazılım",
+      "desc": "Sıfırdan uçtan uca özel yazılım ve yapay zeka ürün geliştirme.",
+      "price": "Özel",
+      "period": "",
+      "feat1": "Full stack web ve mobil geliştirme",
+      "feat2": "On-premise veya VPC dağıtımı",
+      "feat3": "Tam fikri mülkiyet devri",
+      "feat4": "7/24 Kurumsal SLA",
+      "button": "Satış Ekibiyle Görüş"
+    }
+  },
+  "integrations": {
+    "badge": "Altyapınıza uygun",
+    "title1": "Her yerde çalışır.",
+    "title2": "Her şeyle entegre olur.",
+    "desc": "ERP'ler, CRM'ler, bulut platformları, veri ambarları ve eski sistemler arasında derin birlikte çalışabilirlik. Mevcut ekosisteminize uyacak şekilde geliştiriyoruz.",
+    "button": "Tüm teknolojileri görün"
+  },
+  "cta": {
+    "title1": "Bir sonraki büyük projenizi",
+    "title2": "inşa etmeye hazır mısınız?",
+    "desc": "Bize en zorlu operasyonel mücadelenizi anlatın. Size haftalar içinde üretim kalitesinde bir teknoloji çözümü sunalım.",
+    "button": "Projenizi Başlatın"
   }
 }
