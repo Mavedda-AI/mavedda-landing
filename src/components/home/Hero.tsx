@@ -6,7 +6,7 @@ import {useTranslation} from "@/hooks/useTranslation";
 export const Hero = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative w-full h-[100dvh] bg-black overflow-hidden pt-28 lg:pt-40 flex flex-col">
+    <section className="relative w-full min-h-[100dvh] bg-black overflow-x-hidden pt-40 lg:pt-48 flex flex-col pb-40">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
         
         {/* Headlines */}
