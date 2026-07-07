@@ -14,12 +14,9 @@ export const Hero = () => {
           {t('hero.title1')} <span className="bg-gradient-to-r from-[#00c5ea] to-[#7800ff] text-transparent bg-clip-text">{t('hero.title2')}</span>
         </h1>
         
-        <h3 className="text-xl md:text-2xl text-gray-300 font-medium mb-10 max-w-3xl text-balance">
+        <h3 className="text-xl md:text-2xl text-gray-300 font-medium mb-8 max-w-3xl text-balance">
           {t('hero.subtitle')}
         </h3>
-        
-        {/* Spacer for structure instead of feature list */}
-        <div className="h-6 mb-12"></div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4 mb-20 z-20">
