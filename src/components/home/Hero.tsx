@@ -10,9 +10,6 @@ export const Hero = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
         
         {/* Headlines */}
-        <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/5 border border-white/10 text-[#00c5ea] text-sm font-semibold tracking-wide backdrop-blur-sm">
-          {t('hero.badge')}
-        </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 max-w-4xl text-balance">
           {t('hero.title1')} <span className="bg-gradient-to-r from-[#00c5ea] to-[#7800ff] text-transparent bg-clip-text">{t('hero.title2')}</span>
         </h1>
