@@ -69,10 +69,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className="max-w-7xl mx-auto mt-24 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-end gap-12">
+      <div className="max-w-7xl mx-auto mt-24 pt-12 border-t border-white/10 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 pb-12">
         <div className="flex flex-col gap-6 text-[12px] md:text-[14px] text-white/50 max-w-[600px]">
           <p>
-            © Mavedda | Quartier Industriel Ouled Saleh Pro. Nouaceur, Casablanca, Morocco
+            © {new Date().getFullYear()} Mavedda | Quartier Industriel Ouled Saleh Pro. Nouaceur, Casablanca, Morocco
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
             <Link href="#" className="hover:text-white transition-colors">Gizlilik ve çerez politikası</Link>
@@ -80,15 +80,19 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Massive Logo & Slogan */}
-        <div className="flex flex-col items-start gap-0 mt-8 mb-4">
-          <h1 className="text-[120px] md:text-[200px] lg:text-[280px] font-medium tracking-tighter leading-none -ml-2 md:-ml-4">
-            Mavedda
-          </h1>
-          <p className="text-[#72E5FF] text-[24px] md:text-[32px] font-serif italic tracking-tight mt-[-10px] md:mt-[-20px] -ml-1 md:-ml-3">
+        {/* Slogan */}
+        <div className="lg:text-right">
+          <p className="text-[#72E5FF] text-[20px] md:text-[28px] lg:text-[32px] font-serif italic tracking-tight">
             Sıradan olsaydık, Mavedda olamazdık.
           </p>
         </div>
+      </div>
+
+      {/* Massive Full-Width Logo */}
+      <div className="w-full overflow-hidden flex justify-center items-center pointer-events-none select-none px-4">
+        <h1 className="text-[18vw] font-black tracking-tighter leading-[0.75] text-white">
+          Mavedda
+        </h1>
       </div>
     </footer>
   );
