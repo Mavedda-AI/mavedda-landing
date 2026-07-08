@@ -106,8 +106,8 @@ function PhoneMockup({ name, features }: { name: string; features: string[] }) {
                   <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#bf5af2]/20 blur-[30px] rounded-full" />
                   
                   <div className="relative z-10">
-                    <p className="text-[10px] text-white/60 font-medium mb-1">Toplam Bakiye</p>
-                    <h3 className="text-[28px] text-white font-extrabold tracking-tighter mb-3">₺148,250<span className="text-[16px] text-white/40">.00</span></h3>
+                    <p className="text-[10px] text-white/60 font-medium mb-1">Aylık Etkileşim</p>
+                    <h3 className="text-[28px] text-white font-extrabold tracking-tighter mb-3">124.5<span className="text-[16px] text-white/40">B</span></h3>
                     
                     {/* Fake Sparkline Chart */}
                     <div className="h-[24px] w-full flex items-end justify-between gap-1 mt-2">
@@ -120,7 +120,7 @@ function PhoneMockup({ name, features }: { name: string; features: string[] }) {
                 
                 {/* Modular List (Features) */}
                 <div className="flex justify-between items-end mb-3">
-                  <p className="text-[11px] text-white font-bold tracking-tight">Hızlı İşlemler</p>
+                  <p className="text-[11px] text-white font-bold tracking-tight">Öne Çıkan Özellikler</p>
                   <span className="text-[9px] text-[#72E5FF] font-medium">Tümü</span>
                 </div>
                 
@@ -137,7 +137,7 @@ function PhoneMockup({ name, features }: { name: string; features: string[] }) {
                       </div>
                       <div className="flex-1">
                         <p className="text-[12px] text-white font-bold tracking-tight truncate">{f}</p>
-                        <p className="text-[9px] text-white/50 mt-0.5 truncate">Modül aktif ve çalışıyor</p>
+                        <p className="text-[9px] text-white/50 mt-0.5 truncate">Platforma entegre edildi</p>
                       </div>
                       <div className="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><polyline points="9 18 15 12 9 6"/></svg>
