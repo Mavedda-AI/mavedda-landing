@@ -45,17 +45,16 @@ export default function Footer() {
 
         {/* Right Column */}
         <div className="flex flex-col gap-16 flex-1 md:pl-20">
-          {/* Follow Us */}
+          {/* Social Links */}
           <div>
             <h4 className="text-[12px] md:text-[14px] font-mono tracking-widest text-white/50 mb-6 uppercase">Bizi Takip Edin</h4>
-            <ul className="flex flex-col gap-4 text-[18px] md:text-[20px]">
-              <li><a href="#" className="hover:underline underline-offset-4 decoration-white/30">LinkedIn</a></li>
-              <li><a href="#" className="hover:underline underline-offset-4 decoration-white/30">Instagram</a></li>
-              <li><a href="#" className="hover:underline underline-offset-4 decoration-white/30">Glassdoor</a></li>
-              <li><a href="#" className="hover:underline underline-offset-4 decoration-white/30">Facebook</a></li>
-              <li><a href="#" className="hover:underline underline-offset-4 decoration-white/30">Medium</a></li>
-              <li><a href="#" className="hover:underline underline-offset-4 decoration-white/30">X</a></li>
-            </ul>
+            <div className="flex flex-col gap-4 text-[16px] md:text-[20px] text-white">
+              <Link href="#" className="hover:text-white/70 transition-colors">LinkedIn</Link>
+              <Link href="#" className="hover:text-white/70 transition-colors">Instagram</Link>
+              <Link href="#" className="hover:text-white/70 transition-colors">Facebook</Link>
+              <Link href="#" className="hover:text-white/70 transition-colors">Medium</Link>
+              <Link href="#" className="hover:text-white/70 transition-colors">X</Link>
+            </div>
           </div>
 
           {/* Offices */}
