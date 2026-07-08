@@ -27,8 +27,79 @@ function extractFeatures(text: string): string[] {
   return lines.slice(0, 4).map(l => l.trim().substring(0, 28));
 }
 
+interface ProjectMetrics {
+  metricName: string;
+  metricValue: string;
+  dashCards: { title: string; value: string; trend: string; color: string; line: string; }[];
+}
+
+function getProjectMetrics(text: string): ProjectMetrics {
+  const lowerText = text.toLowerCase();
+  
+  if (/(astroloji|fal|burç|tarot|yıldız)/.test(lowerText)) {
+    return { 
+      metricName: 'Günlük Okuma', metricValue: '14.5B',
+      dashCards: [
+        { title: 'Okunan Fal', value: '14.5K', trend: '+12%', color: 'from-[#bf5af2]/20 to-transparent', line: '#bf5af2' },
+        { title: 'Aktif Üye', value: '8.2K', trend: '+5%', color: 'from-[#0a84ff]/20 to-transparent', line: '#0a84ff' },
+        { title: 'Premium', value: '%18', trend: '+2%', color: 'from-[#30d158]/20 to-transparent', line: '#30d158' }
+      ]
+    };
+  }
+  if (/(e-ticaret|satış|pazaryeri|mağaza|ürün|sipariş|kargo|sepet)/.test(lowerText)) {
+    return {
+      metricName: 'Aylık Satış', metricValue: '₺145K',
+      dashCards: [
+        { title: 'Aylık Ciro', value: '₺145K', trend: '+14.5%', color: 'from-[#0a84ff]/20 to-transparent', line: '#0a84ff' },
+        { title: 'Yeni Sipariş', value: '1.2K', trend: '+8.2%', color: 'from-[#30d158]/20 to-transparent', line: '#30d158' },
+        { title: 'Dönüşüm', value: '%4.8', trend: '+1.2%', color: 'from-[#bf5af2]/20 to-transparent', line: '#bf5af2' }
+      ]
+    };
+  }
+  if (/(kripto|finans|banka|borsa|cüzdan|yatırım|para|döviz)/.test(lowerText)) {
+    return {
+      metricName: 'Toplam Portföy', metricValue: '₺342K',
+      dashCards: [
+        { title: 'İşlem Hacmi', value: '₺1.2M', trend: '+24%', color: 'from-[#30d158]/20 to-transparent', line: '#30d158' },
+        { title: 'Aktif Cüzdan', value: '12.4K', trend: '+15%', color: 'from-[#0a84ff]/20 to-transparent', line: '#0a84ff' },
+        { title: 'Komisyon', value: '₺45K', trend: '+8%', color: 'from-[#bf5af2]/20 to-transparent', line: '#bf5af2' }
+      ]
+    };
+  }
+  if (/(sağlık|fitness|kalori|spor|diyet|antrenman|doktor|hastane|randevu|rezervasyon)/.test(lowerText)) {
+    return {
+      metricName: 'Aylık Randevu', metricValue: '1,450',
+      dashCards: [
+        { title: 'Aktif Danışan', value: '850', trend: '+10%', color: 'from-[#0a84ff]/20 to-transparent', line: '#0a84ff' },
+        { title: 'Yeni Randevu', value: '145', trend: '+5%', color: 'from-[#30d158]/20 to-transparent', line: '#30d158' },
+        { title: 'Memnuniyet', value: '%98', trend: '+1%', color: 'from-[#bf5af2]/20 to-transparent', line: '#bf5af2' }
+      ]
+    };
+  }
+  if (/(sosyal|sohbet|chat|mesaj|flört|arkadaş|topluluk)/.test(lowerText)) {
+    return {
+      metricName: 'Günlük Mesaj', metricValue: '24.5B',
+      dashCards: [
+        { title: 'Mesajlaşma', value: '24.5K', trend: '+18%', color: 'from-[#0a84ff]/20 to-transparent', line: '#0a84ff' },
+        { title: 'Eşleşme', value: '1.2K', trend: '+12%', color: 'from-[#bf5af2]/20 to-transparent', line: '#bf5af2' },
+        { title: 'Aktif Süre', value: '42dk', trend: '+5%', color: 'from-[#30d158]/20 to-transparent', line: '#30d158' }
+      ]
+    };
+  }
+  
+  // Generic Default
+  return {
+    metricName: 'Aylık Etkileşim', metricValue: '124.5B',
+    dashCards: [
+      { title: 'Toplam Ciro', value: '₺2.4M', trend: '+14.5%', color: 'from-[#0a84ff]/20 to-transparent', line: '#0a84ff' },
+      { title: 'Aktif Kullanıcı', value: '18.2K', trend: '+5.2%', color: 'from-[#30d158]/20 to-transparent', line: '#30d158' },
+      { title: 'Dönüşüm Oranı', value: '%4.8', trend: '+1.2%', color: 'from-[#bf5af2]/20 to-transparent', line: '#bf5af2' }
+    ]
+  };
+}
+
 /* ─── Phone Mockup ─── */
-function PhoneMockup({ name, features }: { name: string; features: string[] }) {
+function PhoneMockup({ name, features, metrics }: { name: string; features: string[], metrics: ProjectMetrics }) {
   return (
     <div className="flex justify-center items-center py-6 perspective-[2000px]">
       {/* 3D Angled Phone Container */}
@@ -106,8 +177,8 @@ function PhoneMockup({ name, features }: { name: string; features: string[] }) {
                   <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#bf5af2]/20 blur-[30px] rounded-full" />
                   
                   <div className="relative z-10">
-                    <p className="text-[10px] text-white/60 font-medium mb-1">Aylık Etkileşim</p>
-                    <h3 className="text-[28px] text-white font-extrabold tracking-tighter mb-3">124.5<span className="text-[16px] text-white/40">B</span></h3>
+                    <p className="text-[10px] text-white/60 font-medium mb-1">{metrics.metricName}</p>
+                    <h3 className="text-[28px] text-white font-extrabold tracking-tighter mb-3">{metrics.metricValue.replace(/B|K/g, '')}<span className="text-[16px] text-white/40">{metrics.metricValue.match(/[A-Za-z]+$/) ? metrics.metricValue.match(/[A-Za-z]+$/)![0] : ''}</span></h3>
                     
                     {/* Fake Sparkline Chart */}
                     <div className="h-[24px] w-full flex items-end justify-between gap-1 mt-2">
@@ -196,7 +267,7 @@ function PhoneMockup({ name, features }: { name: string; features: string[] }) {
 }
 
 /* ─── Browser Mockup ─── */
-function BrowserMockup({ name, features }: { name: string; features: string[] }) {
+function BrowserMockup({ name, features, metrics }: { name: string; features: string[], metrics: ProjectMetrics }) {
   return (
     <div className="w-full max-w-[480px] mx-auto py-6 perspective-[2000px]">
       <div className="bg-[#1e1e1e] rounded-[20px] border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(114,229,255,0.1)] overflow-hidden transform-gpu transition-transform duration-1000 hover:scale-[1.02]"
@@ -272,7 +343,7 @@ function BrowserMockup({ name, features }: { name: string; features: string[] })
 }
 
 /* ─── Dashboard Mockup ─── */
-function DashboardMockup({ name, features }: { name: string; features: string[] }) {
+function DashboardMockup({ name, features, metrics }: { name: string; features: string[], metrics: ProjectMetrics }) {
   return (
     <div className="w-full max-w-[480px] mx-auto py-6 perspective-[2000px]">
       <div className="bg-[#111114] rounded-[24px] border border-[#2a2a2c] shadow-[0_30px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(114,229,255,0.05)] overflow-hidden transform-gpu transition-transform duration-1000 hover:scale-[1.02]"
@@ -321,11 +392,7 @@ function DashboardMockup({ name, features }: { name: string; features: string[] 
 
             {/* Metric Cards */}
             <div className="grid grid-cols-3 gap-4 mb-6 relative z-10">
-              {[
-                { title: 'Toplam Ciro', value: '₺2.4M', trend: '+14.5%', color: 'from-[#0a84ff]/20 to-[#0a84ff]/0', line: '#0a84ff' },
-                { title: 'Aktif Kullanıcı', value: '18.2K', trend: '+5.2%', color: 'from-[#30d158]/20 to-[#30d158]/0', line: '#30d158' },
-                { title: 'Dönüşüm Oranı', value: '%4.8', trend: '+1.2%', color: 'from-[#bf5af2]/20 to-[#bf5af2]/0', line: '#bf5af2' },
-              ].map((card, i) => (
+              {metrics.dashCards.map((card, i) => (
                 <div key={i} className="bg-white/[0.02] border border-white/5 rounded-2xl p-4 backdrop-blur-sm relative overflow-hidden">
                   <div className={`absolute bottom-0 left-0 right-0 h-[40%] bg-gradient-to-t ${card.color}`} />
                   <p className="text-[10px] text-white/50 font-medium mb-1">{card.title}</p>
@@ -369,7 +436,7 @@ function DashboardMockup({ name, features }: { name: string; features: string[] 
 }
 
 /* ─── IoT Mockup ─── */
-function IoTMockup({ name, features }: { name: string; features: string[] }) {
+function IoTMockup({ name, features, metrics }: { name: string; features: string[], metrics: ProjectMetrics }) {
   // Similar ultra-premium treatment for IoT
   return (
     <div className="w-full max-w-[480px] mx-auto py-6 perspective-[2000px]">
@@ -444,24 +511,27 @@ function IoTMockup({ name, features }: { name: string; features: string[] }) {
 }
 
 /* ─── Generic Mockup ─── */
-function GenericMockup({ name, features }: { name: string; features: string[] }) {
+function GenericMockup({ name, features, metrics }: { name: string; features: string[], metrics: ProjectMetrics }) {
   return (
-    <div className="w-full max-w-[440px] mx-auto py-6 perspective-[2000px]">
-      <div className="bg-gradient-to-br from-[#1c1c1e] to-[#0c0c0e] rounded-[24px] border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(114,229,255,0.06)] p-8 transform-gpu transition-transform duration-1000 hover:scale-[1.02]"
-           style={{ transform: 'rotateX(5deg) rotateY(5deg)', transformStyle: 'preserve-3d' }}>
-        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#0a84ff] to-[#bf5af2] mb-6 flex items-center justify-center shadow-[0_0_20px_rgba(10,132,255,0.3)]">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-        </div>
-        <h2 className="text-[24px] text-white font-extrabold tracking-tight mb-2">{name}</h2>
-        <p className="text-[12px] text-white/50 mb-8 max-w-[80%]">Sizin için özel olarak hazırlanacak dijital çözümün temel mimarisi.</p>
-        
-        <div className="space-y-3">
-          {features.map((f, i) => (
-            <div key={i} className="flex items-center gap-4 bg-white/[0.03] rounded-xl p-4 border border-white/[0.05]">
-              <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 font-bold text-[12px]">{i+1}</div>
-              <span className="text-[13px] text-white/90 font-medium">{f}</span>
-            </div>
-          ))}
+    <div className="w-full max-w-[480px] mx-auto py-6 perspective-[2000px]">
+      <div className="bg-[#111116] rounded-[24px] border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(255,255,255,0.05)] overflow-hidden transform-gpu transition-transform duration-1000 hover:scale-[1.02]"
+           style={{ transform: 'rotateY(-5deg) rotateX(5deg)', transformStyle: 'preserve-3d' }}>
+        <div className="p-8 flex flex-col items-center justify-center text-center min-h-[400px] relative">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)]" />
+          <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 mb-6 flex items-center justify-center relative z-10 shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h2 className="text-[24px] text-white font-extrabold tracking-tight mb-2 relative z-10">{name}</h2>
+          <p className="text-[12px] text-white/50 mb-8 max-w-[80%] relative z-10">{metrics.metricName} — {metrics.metricValue}</p>
+          
+          <div className="space-y-3 w-full relative z-10">
+            {features.map((f, i) => (
+              <div key={i} className="flex items-center gap-4 bg-white/[0.03] rounded-xl p-4 border border-white/[0.05]">
+                <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 font-bold text-[12px]">{i+1}</div>
+                <span className="text-[13px] text-white/90 font-medium">{f}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -472,6 +542,7 @@ function GenericMockup({ name, features }: { name: string; features: string[] })
 function ProjectPreview({ service, details }: { service: string; details: string }) {
   const name = useMemo(() => extractProjectName(details), [details]);
   const features = useMemo(() => extractFeatures(details), [details]);
+  const metrics = useMemo(() => getProjectMetrics(details), [details]);
 
   const MockupComponent = {
     'Mobil Uygulama': PhoneMockup,
@@ -499,7 +570,7 @@ function ProjectPreview({ service, details }: { service: string; details: string
         {/* Ambient glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[200px] h-[100px] bg-[#72E5FF]/10 blur-[60px] rounded-full pointer-events-none" />
         
-        <MockupComponent name={name} features={features} />
+        <MockupComponent name={name} features={features} metrics={metrics} />
         
         <div className="text-center mt-4">
           <p className="text-[10px] text-white/30 italic">
@@ -571,7 +642,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
         setProjectDetails('');
         setShowPreview(false);
       } else {
-        alert('Gönderim sırasında bir hata oluştu. Lütfen daha sonra tekrar deneyin.');
+        alert('Gönderim sırasında bir hata oluştu, lütfen internet bağlantınızı kontrol edin.');
       }
     } catch (error) {
       alert('Bir ağ hatası oluştu, lütfen internet bağlantınızı kontrol edin.');
