@@ -289,25 +289,25 @@ function BrowserMockup({ name, features, metrics }: { name: string; features: st
         </div>
         
         {/* Page Content */}
-        <div className="bg-[#0c0c0e] h-[300px] relative overflow-hidden">
+        <div className="bg-[#0c0c0e] min-h-[360px] relative overflow-hidden flex flex-col">
           {/* Glowing Orbs Background */}
           <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#0a84ff]/20 blur-[60px] rounded-full mix-blend-screen" />
           <div className="absolute top-20 -right-20 w-80 h-80 bg-[#bf5af2]/15 blur-[60px] rounded-full mix-blend-screen" />
           
-          <div className="relative z-10 p-8 flex flex-col h-full">
+          <div className="relative z-10 p-8 flex flex-col h-full flex-1">
             {/* Header */}
             <div className="flex justify-between items-center mb-8">
-              <span className="text-[14px] text-white font-black tracking-tighter">{name.toUpperCase()}</span>
-              <div className="flex gap-6">
+              <span className="text-[14px] text-white font-black tracking-tighter truncate max-w-[100px]">{name.toUpperCase()}</span>
+              <div className="flex gap-4 md:gap-6">
                 {['Özellikler', 'Çözümler', 'Fiyatlandırma'].map((item, i) => (
-                  <span key={i} className="text-[11px] text-white/60 font-medium hover:text-white cursor-pointer transition-colors">{item}</span>
+                  <span key={i} className="hidden sm:inline-block text-[11px] text-white/60 font-medium hover:text-white cursor-pointer transition-colors">{item}</span>
                 ))}
-                <div className="bg-white text-black rounded-full px-4 py-1.5 text-[11px] font-bold shadow-[0_0_15px_rgba(255,255,255,0.3)]">Giriş Yap</div>
+                <div className="bg-white text-black rounded-full px-4 py-1.5 text-[11px] font-bold shadow-[0_0_15px_rgba(255,255,255,0.3)] whitespace-nowrap">Giriş Yap</div>
               </div>
             </div>
             
             {/* Hero Section */}
-            <div className="max-w-[70%]">
+            <div className="max-w-[100%]">
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-3 py-1 mb-4 backdrop-blur-md">
                 <span className="flex h-2 w-2 relative">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#72E5FF] opacity-75"></span>
@@ -315,22 +315,22 @@ function BrowserMockup({ name, features, metrics }: { name: string; features: st
                 </span>
                 <span className="text-[9px] text-[#72E5FF] font-bold tracking-widest uppercase">Yeni Nesil Platform</span>
               </div>
-              <h1 className="text-[28px] text-white font-extrabold tracking-tight leading-[1.1] mb-3">
+              <h1 className="text-[26px] md:text-[28px] text-white font-extrabold tracking-tight leading-[1.1] mb-3">
                 İşinizi geleceğe taşıyan <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#72E5FF] to-[#bf5af2]">akıllı çözümler</span>
               </h1>
-              <p className="text-[11px] text-white/50 leading-relaxed max-w-[80%] mb-6">
+              <p className="text-[11px] text-white/50 leading-relaxed max-w-[90%] md:max-w-[80%] mb-2">
                 {name} projesi için özel olarak tasarlanmış, yüksek performanslı ve güvenli modern web altyapısı.
               </p>
             </div>
             
-            {/* Floating Feature Cards */}
-            <div className="absolute right-8 bottom-8 flex gap-4">
+            {/* Feature Cards (No longer absolute to avoid overlap) */}
+            <div className="mt-auto pt-6 flex gap-4 w-full">
               {features.slice(0, 2).map((f, i) => (
-                <div key={i} className="w-[140px] bg-white/[0.03] backdrop-blur-xl rounded-2xl p-4 border border-white/[0.08] shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:-translate-y-2 transition-transform duration-500">
+                <div key={i} className="flex-1 bg-white/[0.03] backdrop-blur-xl rounded-2xl p-4 border border-white/[0.08] shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:-translate-y-2 transition-transform duration-500">
                   <div className={`w-10 h-10 rounded-xl mb-3 flex items-center justify-center ${i === 0 ? 'bg-[#0a84ff]/20 text-[#0a84ff]' : 'bg-[#bf5af2]/20 text-[#bf5af2]'}`}>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                   </div>
-                  <h4 className="text-[12px] text-white font-bold mb-1">{f}</h4>
+                  <h4 className="text-[12px] text-white font-bold mb-1 truncate">{f}</h4>
                   <div className="h-1 w-8 bg-white/20 rounded-full" />
                 </div>
               ))}
