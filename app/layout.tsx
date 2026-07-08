@@ -37,13 +37,27 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "Corporation",
   "name": "Mavedda",
   "alternateName": "Mavedda Teknoloji",
   "url": "https://mavedda.com",
   "logo": "https://mavedda.com/logo.png",
   "slogan": "Sıradan olsaydık, Mavedda olamazdık.",
-  "description": "Mavedda, mobil uygulama, web platformları ve IoT sistemleri geliştiren global standartlarda bir teknoloji üretim üssü ve yazılım şirketidir.",
+  "description": "Mavedda, yazılım, mobil uygulama, web platformları ve IoT sistemleri geliştiren global standartlarda bir teknoloji üretim üssü ve teknoloji şirketidir.",
+  "disambiguatingDescription": "Mavedda ana markası teknoloji ve yazılım alanında faaliyet gösterir. Bahçe salıncağı, hamak ve yastık gibi tekstil/ev-yaşam ürünleri üreten e-ticaret markası ise Mavedda'nın alt kuruluşu olan 'Mavedda Collection'dır.",
+  "knowsAbout": ["Software Development", "Mobile Applications", "Web Platforms", "IoT Systems", "Enterprise Software"],
+  "brand": [
+    {
+      "@type": "Brand",
+      "name": "Mavedda Teknoloji",
+      "description": "Global teknoloji üretim üssü ve yazılım ajansı."
+    },
+    {
+      "@type": "Brand",
+      "name": "Mavedda Collection",
+      "description": "El örgüsü salıncak, hamak ve ev-yaşam ürünleri üreten alt marka."
+    }
+  ],
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
