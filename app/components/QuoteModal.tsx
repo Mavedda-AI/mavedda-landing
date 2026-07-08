@@ -30,87 +30,121 @@ function extractFeatures(text: string): string[] {
 /* ─── Phone Mockup ─── */
 function PhoneMockup({ name, features }: { name: string; features: string[] }) {
   return (
-    <div className="flex justify-center">
-      <div className="relative w-[220px] h-[440px] bg-[#1c1c1e] rounded-[44px] border-[2px] border-[#3a3a3c] shadow-[0_20px_80px_rgba(0,0,0,0.6),0_0_40px_rgba(114,229,255,0.08)]">
+    <div className="flex justify-center group perspective-1000">
+      {/* Phone Body with Titanium Frame */}
+      <div className="relative w-[230px] h-[460px] rounded-[48px] bg-gradient-to-br from-[#5a5a5c] via-[#2a2a2c] to-[#5a5a5c] p-[3px] shadow-[0_30px_100px_rgba(0,0,0,0.8),0_0_60px_rgba(114,229,255,0.15)] group-hover:-translate-y-3 group-hover:shadow-[0_40px_120px_rgba(0,0,0,0.9),0_0_80px_rgba(114,229,255,0.25)] transition-all duration-700 ease-out transform-gpu">
+        
         {/* Side buttons */}
-        <div className="absolute -left-[2px] top-[100px] w-[3px] h-[28px] bg-[#3a3a3c] rounded-l" />
-        <div className="absolute -left-[2px] top-[140px] w-[3px] h-[44px] bg-[#3a3a3c] rounded-l" />
-        <div className="absolute -left-[2px] top-[190px] w-[3px] h-[44px] bg-[#3a3a3c] rounded-l" />
-        <div className="absolute -right-[2px] top-[130px] w-[3px] h-[56px] bg-[#3a3a3c] rounded-r" />
-        {/* Screen */}
-        <div className="absolute inset-[6px] rounded-[38px] overflow-hidden bg-[#000]">
+        <div className="absolute -left-[3px] top-[100px] w-[3px] h-[28px] bg-gradient-to-r from-[#2a2a2c] to-[#4a4a4c] rounded-l-sm" />
+        <div className="absolute -left-[3px] top-[145px] w-[3px] h-[44px] bg-gradient-to-r from-[#2a2a2c] to-[#4a4a4c] rounded-l-sm" />
+        <div className="absolute -left-[3px] top-[200px] w-[3px] h-[44px] bg-gradient-to-r from-[#2a2a2c] to-[#4a4a4c] rounded-l-sm" />
+        <div className="absolute -right-[3px] top-[135px] w-[3px] h-[56px] bg-gradient-to-l from-[#2a2a2c] to-[#4a4a4c] rounded-r-sm" />
+        
+        {/* Screen Bezel */}
+        <div className="absolute inset-[3px] bg-black rounded-[44px] overflow-hidden">
+          
+          {/* Glass Glare Effect */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.03] to-white/[0.08] pointer-events-none z-30" />
+          
           {/* Dynamic Island */}
-          <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[76px] h-[22px] bg-black rounded-full z-20 flex items-center justify-center gap-2">
-            <div className="w-[6px] h-[6px] rounded-full bg-[#1a1a2e] ring-1 ring-[#2a2a3e]" />
+          <div className="absolute top-[12px] left-1/2 -translate-x-1/2 w-[80px] h-[24px] bg-black rounded-full z-40 flex items-center justify-between px-2.5 shadow-[inset_0_-1px_2px_rgba(255,255,255,0.1)] ring-1 ring-white/5">
+            <div className="w-[8px] h-[8px] rounded-full bg-[#0a0a14] ring-1 ring-white/10 shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] flex items-center justify-center">
+              <div className="w-[3px] h-[3px] rounded-full bg-[#1a1a4a] blur-[0.5px]" />
+            </div>
+            <div className="w-[4px] h-[4px] rounded-full bg-green-500/80 animate-pulse" />
           </div>
+          
           {/* Screen content */}
-          <div className="h-full bg-gradient-to-b from-[#0c0c0e] via-[#111114] to-[#0c0c0e]">
+          <div className="h-full bg-gradient-to-b from-[#0a0a0c] via-[#121216] to-[#0a0a0c] relative">
+            
+            {/* Ambient Background Glows */}
+            <div className="absolute top-0 left-0 w-full h-[150px] bg-[#72E5FF]/10 blur-[40px] rounded-full" />
+            <div className="absolute bottom-[-50px] right-[-50px] w-[150px] h-[150px] bg-[#bf5af2]/10 blur-[50px] rounded-full" />
+
             {/* Status bar */}
-            <div className="flex justify-between items-center px-7 pt-[14px] pb-1">
-              <span className="text-[10px] text-white font-semibold tracking-tight">9:41</span>
-              <div className="flex gap-[3px] items-center">
-                <svg width="14" height="10" viewBox="0 0 14 10" fill="white" opacity="0.6"><rect x="0" y="4" width="3" height="6" rx="0.5"/><rect x="4" y="2" width="3" height="8" rx="0.5"/><rect x="8" y="0" width="3" height="10" rx="0.5"/></svg>
-                <svg width="13" height="10" viewBox="0 0 13 10" fill="white" opacity="0.6"><path d="M0.5 3.5C3.5 0.5 9.5 0.5 12.5 3.5M2.5 5.5C4.5 3.5 8.5 3.5 10.5 5.5M4.5 7.5C5.5 6.5 7.5 6.5 8.5 7.5" stroke="white" strokeWidth="1" fill="none"/><circle cx="6.5" cy="9" r="1"/></svg>
-                <div className="w-[18px] h-[9px] border border-white/50 rounded-[2px] ml-0.5 relative">
-                  <div className="absolute inset-[1px] right-[3px] bg-[#30d158] rounded-[1px]" />
-                  <div className="absolute -right-[2px] top-[2px] w-[1.5px] h-[4px] bg-white/50 rounded-r-sm" />
+            <div className="flex justify-between items-center px-7 pt-[16px] pb-2 relative z-20">
+              <span className="text-[11px] text-white font-semibold tracking-tight">9:41</span>
+              <div className="flex gap-[4px] items-center">
+                <svg width="15" height="11" viewBox="0 0 14 10" fill="white" opacity="0.8"><rect x="0" y="4" width="3" height="6" rx="0.5"/><rect x="4" y="2" width="3" height="8" rx="0.5"/><rect x="8" y="0" width="3" height="10" rx="0.5"/></svg>
+                <svg width="14" height="11" viewBox="0 0 13 10" fill="white" opacity="0.8"><path d="M0.5 3.5C3.5 0.5 9.5 0.5 12.5 3.5M2.5 5.5C4.5 3.5 8.5 3.5 10.5 5.5M4.5 7.5C5.5 6.5 7.5 6.5 8.5 7.5" stroke="white" strokeWidth="1" fill="none"/><circle cx="6.5" cy="9" r="1"/></svg>
+                <div className="w-[20px] h-[10px] border-[1.5px] border-white/60 rounded-[3px] ml-0.5 relative">
+                  <div className="absolute inset-[1px] right-[2px] bg-white rounded-[1px]" />
+                  <div className="absolute -right-[3px] top-[2px] w-[2px] h-[3px] bg-white/60 rounded-r-sm" />
                 </div>
               </div>
             </div>
+
             {/* App Content */}
-            <div className="px-4 pt-6">
+            <div className="px-4 pt-6 relative z-20">
               {/* Greeting */}
-              <div className="mb-4">
-                <p className="text-[9px] text-white/40 mb-0.5">Hoş geldiniz</p>
-                <h2 className="text-[16px] text-white font-bold tracking-tight leading-tight">{name}</h2>
-              </div>
-              {/* Search Bar */}
-              <div className="flex items-center gap-2 bg-white/[0.06] rounded-xl px-3 py-2 mb-4 border border-white/[0.04]">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" opacity="0.3"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <span className="text-[9px] text-white/25">Ara...</span>
-              </div>
-              {/* Stats Row */}
-              <div className="grid grid-cols-2 gap-2 mb-4">
-                <div className="bg-gradient-to-br from-[#72E5FF]/15 to-[#72E5FF]/5 rounded-2xl p-3 border border-[#72E5FF]/10">
-                  <p className="text-[8px] text-white/40 mb-1">Aktif</p>
-                  <p className="text-[18px] text-white font-bold leading-none">247</p>
-                  <div className="flex items-center gap-1 mt-1">
-                    <svg width="8" height="8" viewBox="0 0 10 10" fill="#30d158"><path d="M5 0L9 6H1L5 0Z"/></svg>
-                    <span className="text-[7px] text-[#30d158]">+12%</span>
-                  </div>
-                </div>
-                <div className="bg-white/[0.04] rounded-2xl p-3 border border-white/[0.04]">
-                  <p className="text-[8px] text-white/40 mb-1">Gelir</p>
-                  <p className="text-[18px] text-white font-bold leading-none">₺48K</p>
-                  <div className="flex items-center gap-1 mt-1">
-                    <svg width="8" height="8" viewBox="0 0 10 10" fill="#30d158"><path d="M5 0L9 6H1L5 0Z"/></svg>
-                    <span className="text-[7px] text-[#30d158]">+8%</span>
-                  </div>
-                </div>
-              </div>
-              {/* Feature List */}
-              <p className="text-[8px] text-white/30 uppercase tracking-widest font-semibold mb-2 ml-1">Modüller</p>
-              <div className="space-y-[6px]">
-                {features.map((f, i) => (
-                  <div key={i} className="flex items-center gap-2.5 bg-white/[0.04] rounded-xl px-3 py-2 border border-white/[0.03]">
-                    <div className={`w-7 h-7 rounded-lg flex items-center justify-center ${
-                      i === 0 ? 'bg-[#0a84ff]/20' : 
-                      i === 1 ? 'bg-[#bf5af2]/20' : 
-                      i === 2 ? 'bg-[#30d158]/20' :
-                      'bg-[#ff9f0a]/20'
-                    }`}>
-                      <div className={`w-3 h-3 rounded ${
-                        i === 0 ? 'bg-[#0a84ff]' : i === 1 ? 'bg-[#bf5af2]' : i === 2 ? 'bg-[#30d158]' : 'bg-[#ff9f0a]'
-                      }`} />
+              <div className="mb-5">
+                <div className="flex items-center gap-2 mb-1">
+                  <div className="w-5 h-5 rounded-full bg-gradient-to-tr from-[#72E5FF] to-[#0a84ff] p-[1px]">
+                    <div className="w-full h-full rounded-full bg-[#121216] flex items-center justify-center">
+                      <div className="w-3 h-3 rounded-full bg-gradient-to-tr from-[#72E5FF] to-[#0a84ff]" />
                     </div>
-                    <span className="text-[10px] text-white/80 font-medium truncate flex-1">{f}</span>
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" opacity="0.15"><polyline points="9 18 15 12 9 6"/></svg>
+                  </div>
+                  <p className="text-[10px] text-white/50 font-medium">Hoş geldiniz</p>
+                </div>
+                <h2 className="text-[18px] text-white font-bold tracking-tight leading-tight">{name}</h2>
+              </div>
+              
+              {/* Search Bar with Glass Effect */}
+              <div className="flex items-center gap-2 bg-white/[0.05] backdrop-blur-md rounded-2xl px-3.5 py-2.5 mb-5 border border-white/[0.08] shadow-[0_4px_16px_rgba(0,0,0,0.2)]">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" opacity="0.4"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span className="text-[10px] text-white/40">Uygulamada ara...</span>
+              </div>
+              
+              {/* Stats Row */}
+              <div className="grid grid-cols-2 gap-3 mb-5">
+                <div className="bg-gradient-to-br from-[#72E5FF]/20 to-[#72E5FF]/5 backdrop-blur-md rounded-[20px] p-3.5 border border-[#72E5FF]/20 shadow-[0_8px_20px_rgba(114,229,255,0.1)] relative overflow-hidden group-hover:border-[#72E5FF]/40 transition-colors duration-500">
+                  <div className="absolute top-0 right-0 w-12 h-12 bg-[#72E5FF]/20 blur-[15px] rounded-full" />
+                  <p className="text-[9px] text-white/50 font-medium mb-1">Aktif Kullanıcı</p>
+                  <p className="text-[22px] text-white font-extrabold leading-none tracking-tight">247</p>
+                  <div className="flex items-center gap-1 mt-1.5">
+                    <div className="bg-[#30d158]/20 px-1 py-0.5 rounded text-[8px] text-[#30d158] font-bold flex items-center gap-0.5">
+                      <svg width="6" height="6" viewBox="0 0 10 10" fill="currentColor"><path d="M5 0L9 6H1L5 0Z"/></svg>
+                      12%
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white/[0.04] backdrop-blur-md rounded-[20px] p-3.5 border border-white/[0.08] shadow-[0_8px_20px_rgba(0,0,0,0.2)] relative overflow-hidden group-hover:border-white/[0.15] transition-colors duration-500">
+                  <div className="absolute top-0 right-0 w-12 h-12 bg-white/5 blur-[15px] rounded-full" />
+                  <p className="text-[9px] text-white/50 font-medium mb-1">Aylık Gelir</p>
+                  <p className="text-[22px] text-white font-extrabold leading-none tracking-tight">₺48K</p>
+                  <div className="flex items-center gap-1 mt-1.5">
+                    <div className="bg-[#30d158]/20 px-1 py-0.5 rounded text-[8px] text-[#30d158] font-bold flex items-center gap-0.5">
+                      <svg width="6" height="6" viewBox="0 0 10 10" fill="currentColor"><path d="M5 0L9 6H1L5 0Z"/></svg>
+                      8%
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Feature List */}
+              <p className="text-[9px] text-white/40 uppercase tracking-widest font-bold mb-2.5 ml-1">Modüller</p>
+              <div className="space-y-2">
+                {features.map((f, i) => (
+                  <div key={i} className="flex items-center gap-3 bg-white/[0.03] hover:bg-white/[0.06] transition-colors backdrop-blur-md rounded-[16px] px-3.5 py-2.5 border border-white/[0.05]">
+                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center shadow-inner ${
+                      i === 0 ? 'bg-gradient-to-br from-[#0a84ff]/30 to-[#0a84ff]/10 border border-[#0a84ff]/20' : 
+                      i === 1 ? 'bg-gradient-to-br from-[#bf5af2]/30 to-[#bf5af2]/10 border border-[#bf5af2]/20' : 
+                      i === 2 ? 'bg-gradient-to-br from-[#30d158]/30 to-[#30d158]/10 border border-[#30d158]/20' :
+                      'bg-gradient-to-br from-[#ff9f0a]/30 to-[#ff9f0a]/10 border border-[#ff9f0a]/20'
+                    }`}>
+                      <div className={`w-3.5 h-3.5 rounded-md ${
+                        i === 0 ? 'bg-[#0a84ff]' : i === 1 ? 'bg-[#bf5af2]' : i === 2 ? 'bg-[#30d158]' : 'bg-[#ff9f0a]'
+                      } shadow-[0_0_10px_currentColor]`} />
+                    </div>
+                    <span className="text-[11px] text-white/90 font-semibold truncate flex-1 tracking-tight">{f}</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" opacity="0.2"><polyline points="9 18 15 12 9 6"/></svg>
                   </div>
                 ))}
               </div>
             </div>
-            {/* Tab Bar */}
-            <div className="absolute bottom-0 left-0 right-0 bg-[#1c1c1e]/80 backdrop-blur-xl border-t border-white/[0.06] px-3 pb-5 pt-1.5">
+
+            {/* Tab Bar with Glass Effect */}
+            <div className="absolute bottom-0 left-0 right-0 bg-[#1c1c1e]/60 backdrop-blur-2xl border-t border-white/[0.08] px-4 pb-6 pt-2.5 z-30">
               <div className="flex justify-around items-center">
                 {[
                   { active: true, label: 'Ana Sayfa' },
@@ -118,14 +152,14 @@ function PhoneMockup({ name, features }: { name: string; features: string[] }) {
                   { active: false, label: 'Bildirim' },
                   { active: false, label: 'Profil' },
                 ].map((tab, i) => (
-                  <div key={i} className="flex flex-col items-center gap-0.5">
-                    <div className={`w-5 h-5 rounded-md ${tab.active ? 'bg-[#0a84ff]' : 'bg-white/10'}`} />
-                    <span className={`text-[7px] ${tab.active ? 'text-[#0a84ff]' : 'text-white/30'}`}>{tab.label}</span>
+                  <div key={i} className="flex flex-col items-center gap-1">
+                    <div className={`w-6 h-6 rounded-lg ${tab.active ? 'bg-gradient-to-b from-[#72E5FF] to-[#0a84ff] shadow-[0_0_15px_rgba(10,132,255,0.5)]' : 'bg-white/10'}`} />
+                    <span className={`text-[8px] font-medium ${tab.active ? 'text-white' : 'text-white/30'}`}>{tab.label}</span>
                   </div>
                 ))}
               </div>
               {/* Home Indicator */}
-              <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-[100px] h-[4px] bg-white/20 rounded-full" />
+              <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-[110px] h-[5px] bg-white/30 rounded-full" />
             </div>
           </div>
         </div>
