@@ -36,7 +36,8 @@ export const Integrations = () => {
               { x: 80, y: 30 },
               { x: 85, y: 60 },
               { x: 70, y: 80 },
-              { x: 55, y: 65 }
+              { x: 55, y: 65 },
+              { x: 45, y: 88 } // Flutter
             ].map((pos, i) => (
               <line 
                 key={i} 
@@ -53,8 +54,10 @@ export const Integrations = () => {
 
           {/* Central Node */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-[#ff007f] via-[#7800ff] to-[#00c5ea] flex items-center justify-center shadow-[0_0_40px_rgba(120,0,255,0.4)] animate-pulse">
-              <span className="text-3xl md:text-4xl font-bold text-white tracking-tighter">M</span>
+            {/* Subtle glow effect behind */}
+            <div className="absolute inset-0 rounded-full bg-[#7800ff] blur-[30px] opacity-20 animate-pulse"></div>
+            <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full bg-white flex items-center justify-center shadow-xl border border-gray-100 z-10">
+              <img src="/assets/logo/logo_mavedda_dd.svg" alt="Mavedda Core" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
             </div>
           </div>
 
@@ -66,10 +69,11 @@ export const Integrations = () => {
             { id: 4, name: 'Terraform', type: 'large', color: 'bg-[#5c4ee5]', x: 10, y: 45, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg' },
             { id: 5, name: 'Docker', type: 'small', x: 35, y: 80, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
             { id: 6, name: 'Node.js', type: 'small', x: 60, y: 20, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg' },
-            { id: 7, name: 'JavaScript', type: 'large', color: 'bg-[#f7df1e]', x: 80, y: 30, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
+            { id: 7, name: 'JavaScript', type: 'large', color: 'bg-[#f7df1e]', x: 80, y: 30, url: 'https://cdn.simpleicons.org/javascript/000000' },
             { id: 8, name: 'App Store', type: 'small', x: 85, y: 60, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg' },
-            { id: 9, name: 'Play Store', type: 'large', color: 'bg-[#ff007f]', x: 70, y: 80, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg' },
+            { id: 9, name: 'Play Store', type: 'large', color: 'bg-[#ff007f]', x: 70, y: 80, url: 'https://cdn.simpleicons.org/googleplay/ffffff' },
             { id: 10, name: 'App Gallery', type: 'small', x: 55, y: 65, url: 'https://cdn.simpleicons.org/huawei/000000' },
+            { id: 11, name: 'Flutter', type: 'small', x: 45, y: 88, url: 'https://cdn.simpleicons.org/flutter/000000' },
           ].map((node) => (
             <div 
               key={node.id} 
