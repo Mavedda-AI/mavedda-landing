@@ -84,7 +84,7 @@ export const CompoundingAdvantage = () => {
 
           <div 
             ref={sliderRef}
-            className="flex md:grid md:grid-cols-3 gap-8 items-stretch overflow-x-auto snap-x snap-mandatory hide-scrollbar pt-4 pb-8 md:pt-4 md:pb-0"
+            className="flex md:grid md:grid-cols-3 gap-8 items-stretch overflow-x-auto snap-x snap-mandatory hide-scrollbar pt-8 pb-12 md:pt-12 md:pb-12"
           >
             
             {/* Starter Plan */}

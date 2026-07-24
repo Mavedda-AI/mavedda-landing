@@ -25,7 +25,7 @@ export const Footer = () => {
               <img 
                 src="/assets/logo/logo-mavedda.png" 
                 alt="Mavedda" 
-                className="h-24 object-contain brightness-0 invert" 
+                className="h-14 object-contain brightness-0 invert" 
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">

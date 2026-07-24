@@ -38,7 +38,7 @@ export const SecuritySection = () => {
               </p>
 
               <div>
-                <Link href="/security" className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-gray-900 bg-white rounded-full hover:bg-gray-100 hover:shadow-lg transition-all mt-4">
+                <Link href="/legal" className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-gray-900 bg-white rounded-full hover:bg-gray-100 hover:shadow-lg transition-all mt-4">
                   {t('security.button')}
                 </Link>
               </div>

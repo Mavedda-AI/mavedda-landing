@@ -100,7 +100,7 @@ export const Header = () => {
         {/* Logo */}
         <div className="flex-shrink-0 flex items-center">
           <Link href="/">
-            <img src="/assets/logo/logo-mavedda.png" alt="Mavedda Logo" className="h-16 w-auto" />
+            <img src="/assets/logo/logo-mavedda.png" alt="Mavedda Logo" className="h-9 w-auto" />
           </Link>
         </div>
 
