@@ -18,22 +18,34 @@ export default function TeamPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Team placeholders */}
-            {[1, 2, 3, 4, 5, 6].map((member) => (
-              <div key={member} className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="w-full h-64 bg-gray-200 animate-pulse flex items-center justify-center">
-                  <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">Team Member Name</h3>
-                  <p className="text-sm font-medium text-blue-600 mb-4">Position / Role</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Brief description of the team member's expertise and their role in building enterprise-grade software and AI solutions at Mavedda.
-                  </p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Halil İbrahim Direktör */}
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="w-full h-64 bg-gray-100 flex items-center justify-center">
+                <svg className="w-16 h-16 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
               </div>
-            ))}
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-1">Halil İbrahim Direktör</h3>
+                <p className="text-sm font-semibold text-[#00c5ea] mb-4">Software Architect & Embedded Systems Engineer</p>
+                <p className="text-gray-600 text-base leading-relaxed">
+                  Specializes in designing highly scalable microservices, IoT solutions, and robust enterprise infrastructures. He drives Mavedda's technical vision with deep expertise in Node.js, Docker, and distributed architectures.
+                </p>
+              </div>
+            </div>
+
+            {/* Mustafa Mavedda */}
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="w-full h-64 bg-gray-100 flex items-center justify-center">
+                <svg className="w-16 h-16 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-1">Mustafa Mavedda</h3>
+                <p className="text-sm font-semibold text-[#7800ff] mb-4">Chairman of the Board & Application Developer</p>
+                <p className="text-gray-600 text-base leading-relaxed">
+                  A visionary developer and entrepreneur who brings digital products to life. He leads Mavedda’s mobile and cross-platform app development, building successful commercial platforms and seamless user experiences.
+                </p>
+              </div>
+            </div>
           </div>
           
           <div className="flex justify-center mt-8">
