@@ -11,6 +11,13 @@
     "buttonSecondary": "Portfolyomuzu İnceleyin",
     "trustedBy": "EN İYİLERİN TERCİHİ"
   },
+  "industries": {
+    "financialServices": "Finansal Hizmetler",
+    "healthcare": "Sağlık Hizmetleri",
+    "retail": "Perakende",
+    "manufacturing": "Üretim",
+    "realEstate": "Gayrimenkul"
+  },
   "metrics": {
     "title": "Sektörler arası kanıtlanmış sonuçlar",
     "item1": {

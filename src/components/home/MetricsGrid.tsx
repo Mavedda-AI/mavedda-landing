@@ -5,11 +5,11 @@ import Link from 'next/link';
 import {useTranslation} from "@/hooks/useTranslation";
 
 const INDUSTRIES = [
-  { name: 'Financial Services', icon: 'https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/6a09bebeb7b8eb1e055d094a_industry-finance.svg', href: '/industries/financial-services' },
-  { name: 'Healthcare', icon: 'https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/6a09bebe4c63a40e833e94d2_industry-med.svg', href: '/industries/life-sciences' },
-  { name: 'Retail', icon: 'https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/6a09bebe1794be61bfd122d9_industry-retail.svg', href: '/industries/retail' },
-  { name: 'Manufacturing', icon: 'https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/6a09bebe643eedcede3e82e6_industry-industrial.svg', href: '/industries/industrial' },
-  { name: 'Real Estate', icon: 'https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/6a09bebe772e43a7ac370d24_industry-realestate.svg', href: '/industries/real-estate' },
+  { key: 'financialServices', icon: 'https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/6a09bebeb7b8eb1e055d094a_industry-finance.svg', href: '/industries/financial-services' },
+  { key: 'healthcare', icon: 'https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/6a09bebe4c63a40e833e94d2_industry-med.svg', href: '/industries/life-sciences' },
+  { key: 'retail', icon: 'https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/6a09bebe1794be61bfd122d9_industry-retail.svg', href: '/industries/retail' },
+  { key: 'manufacturing', icon: 'https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/6a09bebe643eedcede3e82e6_industry-industrial.svg', href: '/industries/industrial' },
+  { key: 'realEstate', icon: 'https://cdn.prod.website-files.com/66b34f2ad59081546d14c723/6a09bebe772e43a7ac370d24_industry-realestate.svg', href: '/industries/real-estate' },
 ];
 
 export const MetricsGrid = () => {
@@ -36,9 +36,9 @@ export const MetricsGrid = () => {
           {INDUSTRIES.map((ind, i) => (
             <Link key={i} href={ind.href} className="group flex flex-col gap-4 p-6 bg-white border border-gray-200 rounded-xl hover:border-gray-300 transition-colors hover:shadow-sm">
               <div className="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center p-2 group-hover:bg-gray-100 transition-colors">
-                <img src={ind.icon} alt={ind.name} className="w-full h-full object-contain" />
+                <img src={ind.icon} alt={t(`industries.${ind.key}`)} className="w-full h-full object-contain" />
               </div>
-              <div className="font-semibold text-gray-900">{ind.name}</div>
+              <div className="font-semibold text-gray-900">{t(`industries.${ind.key}`)}</div>
             </Link>
           ))}
         </div>

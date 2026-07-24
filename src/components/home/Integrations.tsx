@@ -32,7 +32,7 @@ export const Integrations = () => {
 
         {/* Action */}
         <div>
-          <Link href="/integrations" className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white bg-gray-900 rounded-full hover:bg-black hover:shadow-lg transition-all">
+          <Link href="/team" className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white bg-gray-900 rounded-full hover:bg-black hover:shadow-lg transition-all">
             {t('integrations.button')}
           </Link>
         </div>
