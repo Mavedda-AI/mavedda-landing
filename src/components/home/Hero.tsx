@@ -54,20 +54,28 @@ export const Hero = () => {
             <img src="/assets/trusted-logo/logo-lebara.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
             <img src="/assets/trusted-logo/logo-onder.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
             <img src="/assets/trusted-logo/logo-salutbabe.png" className="h-16 opacity-50 grayscale brightness-0 invert hover:grayscale-0 hover:opacity-100 transition-all" alt="Salutbabe" />
+            <img src="/assets/trusted-logo/logo-byst.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Byst" />
+            <img src="/assets/trusted-logo/logo-yst.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Yst" />
             
             <img src="/assets/trusted-logo/logo-lebara.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
             <img src="/assets/trusted-logo/logo-onder.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
             <img src="/assets/trusted-logo/logo-salutbabe.png" className="h-16 opacity-50 grayscale brightness-0 invert hover:grayscale-0 hover:opacity-100 transition-all" alt="Salutbabe" />
+            <img src="/assets/trusted-logo/logo-byst.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Byst" />
+            <img src="/assets/trusted-logo/logo-yst.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Yst" />
           </div>
           {/* Duplicate set for seamless looping */}
           <div className="flex items-center gap-16 px-8">
             <img src="/assets/trusted-logo/logo-lebara.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
             <img src="/assets/trusted-logo/logo-onder.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
             <img src="/assets/trusted-logo/logo-salutbabe.png" className="h-16 opacity-50 grayscale brightness-0 invert hover:grayscale-0 hover:opacity-100 transition-all" alt="Salutbabe" />
+            <img src="/assets/trusted-logo/logo-byst.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Byst" />
+            <img src="/assets/trusted-logo/logo-yst.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Yst" />
             
             <img src="/assets/trusted-logo/logo-lebara.svg" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Lebara" />
             <img src="/assets/trusted-logo/logo-onder.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Onder" />
             <img src="/assets/trusted-logo/logo-salutbabe.png" className="h-16 opacity-50 grayscale brightness-0 invert hover:grayscale-0 hover:opacity-100 transition-all" alt="Salutbabe" />
+            <img src="/assets/trusted-logo/logo-byst.webp" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Byst" />
+            <img src="/assets/trusted-logo/logo-yst.png" className="h-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" alt="Yst" />
           </div>
         </div>
       </div>
