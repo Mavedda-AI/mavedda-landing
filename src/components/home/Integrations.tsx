@@ -21,41 +21,71 @@ export const Integrations = () => {
           </p>
         </div>
 
-        {/* Visual - Technology Grid */}
-        <div className="w-full max-w-5xl mx-auto my-12">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+        {/* Visual - Node Graph */}
+        <div className="w-full max-w-5xl mx-auto my-16 relative h-[500px] md:h-[600px]">
+          
+          {/* SVG Dotted Lines */}
+          <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
             {[
-              { name: 'Java', url: 'https://cdn.simpleicons.org/java/666666' },
-              { name: 'Spring', url: 'https://cdn.simpleicons.org/spring/666666' },
-              { name: 'JavaScript', url: 'https://cdn.simpleicons.org/javascript/666666' },
-              { name: 'Node.js', url: 'https://cdn.simpleicons.org/nodedotjs/666666' },
-              { name: 'TypeScript', url: 'https://cdn.simpleicons.org/typescript/666666' },
-              { name: 'React', url: 'https://cdn.simpleicons.org/react/666666' },
-              { name: 'Next.js', url: 'https://cdn.simpleicons.org/nextdotjs/666666' },
-              { name: 'Python', url: 'https://cdn.simpleicons.org/python/666666' },
-              { name: 'PostgreSQL', url: 'https://cdn.simpleicons.org/postgresql/666666' },
-              { name: 'AWS', url: 'https://cdn.simpleicons.org/amazonaws/666666' },
-              { name: 'Terraform', url: 'https://cdn.simpleicons.org/terraform/666666' },
-              { name: 'Docker', url: 'https://cdn.simpleicons.org/docker/666666' },
-              { name: 'Kubernetes', url: 'https://cdn.simpleicons.org/kubernetes/666666' },
-              { name: 'App Store', url: 'https://cdn.simpleicons.org/apple/666666' },
-              { name: 'Play Store', url: 'https://cdn.simpleicons.org/googleplay/666666' },
-              { name: 'App Gallery', url: 'https://cdn.simpleicons.org/huawei/666666' },
-              { name: 'Redis', url: 'https://cdn.simpleicons.org/redis/666666' },
-              { name: 'Linux', url: 'https://cdn.simpleicons.org/linux/666666' }
-            ].map((tech, i) => (
-              <div key={i} className="flex flex-col items-center justify-center p-4 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 w-24 h-24 md:w-28 md:h-28 group">
-                <img 
-                  src={tech.url} 
-                  alt={tech.name} 
-                  className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-70 group-hover:opacity-100 transition-opacity" 
-                />
-                <span className="text-[10px] md:text-xs text-gray-500 mt-2 font-medium group-hover:text-gray-900 transition-colors text-center leading-tight">
-                  {tech.name}
-                </span>
-              </div>
+              { x: 25, y: 25 },
+              { x: 40, y: 15 },
+              { x: 20, y: 65 },
+              { x: 10, y: 45 },
+              { x: 35, y: 80 },
+              { x: 60, y: 20 },
+              { x: 80, y: 30 },
+              { x: 85, y: 60 },
+              { x: 70, y: 80 },
+              { x: 55, y: 65 }
+            ].map((pos, i) => (
+              <line 
+                key={i} 
+                x1="50%" 
+                y1="50%" 
+                x2={`${pos.x}%`} 
+                y2={`${pos.y}%`} 
+                stroke="#d1d5db" 
+                strokeWidth="1.5" 
+                strokeDasharray="4 4" 
+              />
             ))}
+          </svg>
+
+          {/* Central Node */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-[#ff007f] via-[#7800ff] to-[#00c5ea] flex items-center justify-center shadow-[0_0_40px_rgba(120,0,255,0.4)] animate-pulse">
+              <span className="text-3xl md:text-4xl font-bold text-white tracking-tighter">M</span>
+            </div>
           </div>
+
+          {/* Orbiting Nodes */}
+          {[
+            { id: 1, name: 'Java', type: 'small', x: 25, y: 25, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
+            { id: 2, name: 'Spring', type: 'small', x: 40, y: 15, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' },
+            { id: 3, name: 'AWS', type: 'large', color: 'bg-[#ff9900]', x: 20, y: 65, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
+            { id: 4, name: 'Terraform', type: 'large', color: 'bg-[#5c4ee5]', x: 10, y: 45, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg' },
+            { id: 5, name: 'Docker', type: 'small', x: 35, y: 80, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
+            { id: 6, name: 'Node.js', type: 'small', x: 60, y: 20, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg' },
+            { id: 7, name: 'JavaScript', type: 'large', color: 'bg-[#f7df1e]', x: 80, y: 30, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
+            { id: 8, name: 'App Store', type: 'small', x: 85, y: 60, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg' },
+            { id: 9, name: 'Play Store', type: 'large', color: 'bg-[#ff007f]', x: 70, y: 80, url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg' },
+            { id: 10, name: 'App Gallery', type: 'small', x: 55, y: 65, url: 'https://cdn.simpleicons.org/huawei/000000' },
+          ].map((node) => (
+            <div 
+              key={node.id} 
+              className={`absolute -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center justify-center rounded-full shadow-lg transition-transform hover:scale-110 ${node.type === 'large' ? `${node.color} w-28 h-28 md:w-32 md:h-32 text-white` : 'bg-white w-16 h-16 md:w-20 md:h-20 border border-gray-100'}`}
+              style={{ left: `${node.x}%`, top: `${node.y}%` }}
+            >
+              <img 
+                src={node.url} 
+                alt={node.name} 
+                className={`object-contain ${node.type === 'large' ? 'w-10 h-10 md:w-12 md:h-12 brightness-0 invert' : 'w-8 h-8 md:w-10 md:h-10'} ${node.id === 7 ? 'brightness-0 invert-0' : ''}`} // Keep JS black text if background is yellow
+              />
+              {node.type === 'large' && (
+                <span className={`text-[10px] md:text-xs font-semibold mt-2 ${node.id === 7 ? 'text-black' : 'text-white'}`}>{node.name}</span>
+              )}
+            </div>
+          ))}
         </div>
 
         {/* Action */}
