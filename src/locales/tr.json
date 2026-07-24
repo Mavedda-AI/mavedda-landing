@@ -62,41 +62,41 @@
     "highlight": "Müşterilerimizin %96'sı neden bir sonraki projelerinde bizimle kalıyor? Çünkü sizi kendimize kilitlemeden sonuç veriyoruz."
   },
   "pricing": {
-    "title": "Dijital geliştiriciler için esnek planlar",
-    "subtitle": "Güçlü yapay zeka modelleri entegrasyonundan, baştan sona özel anahtar teslim yazılımlara kadar, ihtiyaçlarınıza göre ölçekleniyoruz.",
+    "title": "Mavedda AI Modelleri ve Fiyatlandırma",
+    "subtitle": "Kullandıkça öde ve kurumsal esnek fiyatlandırma modelleriyle güçlü yapay zeka altyapımızı entegre edin.",
     "tier1": {
-      "title": "Yapay Zeka Danışmanlığı",
-      "desc": "Yapay zeka dönüşümünüz için stratejik yol haritası ve mimari planlama.",
-      "price": "$2,499",
-      "period": "/ay",
-      "feat1": "Teknik fizibilite çalışmaları",
-      "feat2": "Mimari tasarım",
-      "feat3": "MVP kapsam belirleme",
-      "feat4": "Haftalık danışmanlık seansları",
-      "button": "Hemen Başla"
+      "title": "Mavedda-Turbo",
+      "desc": "Hız ve yüksek hacimli operasyonel görevler için optimize edilmiştir.",
+      "price": "$0.15",
+      "period": "/ 1M girdi tokeni",
+      "feat1": "Context Window: 128K",
+      "feat2": "Ultra düşük gecikmeli yanıt",
+      "feat3": "Standart istek limitleri",
+      "feat4": "Topluluk Desteği",
+      "button": "Geliştirmeye Başla"
     },
     "tier2": {
-      "badge": "En Popüler",
-      "title": "Özel Yapay Zeka Entegrasyonu",
-      "desc": "Mevcut sistemlerinize özel yapay zeka modellerini sorunsuz entegre edin.",
-      "price": "$4,999",
-      "period": "/ay",
-      "feat1": "Özel fine-tuning işlemleri",
-      "feat2": "API geliştirme ve entegrasyon",
-      "feat3": "Özel bulut altyapısı",
-      "feat4": "Öncelikli teknik destek",
-      "button": "İnşa Etmeye Başla"
+      "badge": "EN YETENEKLİ",
+      "title": "Mavedda-Pro",
+      "desc": "Karmaşık mantıksal yürütme ve kodlama için en gelişmiş modelimiz.",
+      "price": "$2.50",
+      "period": "/ 1M girdi tokeni",
+      "feat1": "Context Window: 256K",
+      "feat2": "Karmaşık çok adımlı akıl yürütme",
+      "feat3": "Yüksek istek limitleri",
+      "feat4": "Öncelikli Destek",
+      "button": "API Key Alın"
     },
     "tier3": {
-      "title": "Anahtar Teslim Yazılım",
-      "desc": "Sıfırdan uçtan uca özel yazılım ve yapay zeka ürün geliştirme.",
+      "title": "Kurumsal Dağıtım",
+      "desc": "Kendi VPC sınırlarınız içinde güvenli şekilde barındırılan özel modeller.",
       "price": "Özel",
       "period": "",
-      "feat1": "Full stack web ve mobil geliştirme",
-      "feat2": "On-premise veya VPC dağıtımı",
-      "feat3": "Tam fikri mülkiyet devri",
-      "feat4": "7/24 Kurumsal SLA",
-      "button": "Satış Ekibiyle Görüş"
+      "feat1": "Adanmış GPU sunucuları",
+      "feat2": "Özel verilerle fine-tuning",
+      "feat3": "Sıfır veri tutma (zero-retention) politikası",
+      "feat4": "Size Özel Çözüm Mimarı",
+      "button": "Satış Ekibine Ulaşın"
     }
   },
   "integrations": {
