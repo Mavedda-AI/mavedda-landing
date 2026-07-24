@@ -21,91 +21,40 @@ export const Integrations = () => {
           </p>
         </div>
 
-        {/* Visual - Animated Marquee */}
-        <div className="w-full max-w-5xl mx-auto my-8 overflow-hidden relative" style={{ maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)' }}>
-          <style>{`
-            @keyframes marquee {
-              0% { transform: translateX(0%); }
-              100% { transform: translateX(-50%); }
-            }
-            @keyframes marquee-reverse {
-              0% { transform: translateX(-50%); }
-              100% { transform: translateX(0%); }
-            }
-            .animate-marquee {
-              animation: marquee 40s linear infinite;
-            }
-            .animate-marquee-reverse {
-              animation: marquee-reverse 40s linear infinite;
-            }
-          `}</style>
-          
-          <div className="flex flex-col gap-8">
-            {/* Row 1 */}
-            <div className="flex w-[200%] animate-marquee">
-              {[
-                { name: 'Java', url: 'https://cdn.simpleicons.org/java' },
-                { name: 'Spring', url: 'https://cdn.simpleicons.org/spring' },
-                { name: 'JavaScript', url: 'https://cdn.simpleicons.org/javascript' },
-                { name: 'Node.js', url: 'https://cdn.simpleicons.org/nodedotjs' },
-                { name: 'TypeScript', url: 'https://cdn.simpleicons.org/typescript' },
-                { name: 'React', url: 'https://cdn.simpleicons.org/react' },
-                { name: 'Next.js', url: 'https://cdn.simpleicons.org/nextdotjs' },
-                { name: 'Python', url: 'https://cdn.simpleicons.org/python' },
-                { name: 'PostgreSQL', url: 'https://cdn.simpleicons.org/postgresql' },
-                // Duplicate for seamless loop
-                { name: 'Java', url: 'https://cdn.simpleicons.org/java' },
-                { name: 'Spring', url: 'https://cdn.simpleicons.org/spring' },
-                { name: 'JavaScript', url: 'https://cdn.simpleicons.org/javascript' },
-                { name: 'Node.js', url: 'https://cdn.simpleicons.org/nodedotjs' },
-                { name: 'TypeScript', url: 'https://cdn.simpleicons.org/typescript' },
-                { name: 'React', url: 'https://cdn.simpleicons.org/react' },
-                { name: 'Next.js', url: 'https://cdn.simpleicons.org/nextdotjs' },
-                { name: 'Python', url: 'https://cdn.simpleicons.org/python' },
-                { name: 'PostgreSQL', url: 'https://cdn.simpleicons.org/postgresql' }
-              ].map((tech, i) => (
-                <div key={i} className="flex-1 flex items-center justify-center px-4 md:px-8">
-                  <div className="flex flex-col items-center gap-3 group">
-                    <div className="w-16 h-16 md:w-20 md:h-20 bg-white border border-gray-200 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-all group-hover:-translate-y-1">
-                      <img src={tech.url} alt={tech.name} className="w-8 h-8 md:w-10 md:h-10 object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Row 2 */}
-            <div className="flex w-[200%] animate-marquee-reverse">
-              {[
-                { name: 'AWS', url: 'https://cdn.simpleicons.org/amazonaws' },
-                { name: 'Terraform', url: 'https://cdn.simpleicons.org/terraform' },
-                { name: 'Docker', url: 'https://cdn.simpleicons.org/docker' },
-                { name: 'Kubernetes', url: 'https://cdn.simpleicons.org/kubernetes' },
-                { name: 'App Store', url: 'https://cdn.simpleicons.org/apple' },
-                { name: 'Play Store', url: 'https://cdn.simpleicons.org/googleplay' },
-                { name: 'App Gallery', url: 'https://cdn.simpleicons.org/huawei' },
-                { name: 'Redis', url: 'https://cdn.simpleicons.org/redis' },
-                { name: 'Linux', url: 'https://cdn.simpleicons.org/linux' },
-                // Duplicate for seamless loop
-                { name: 'AWS', url: 'https://cdn.simpleicons.org/amazonaws' },
-                { name: 'Terraform', url: 'https://cdn.simpleicons.org/terraform' },
-                { name: 'Docker', url: 'https://cdn.simpleicons.org/docker' },
-                { name: 'Kubernetes', url: 'https://cdn.simpleicons.org/kubernetes' },
-                { name: 'App Store', url: 'https://cdn.simpleicons.org/apple' },
-                { name: 'Play Store', url: 'https://cdn.simpleicons.org/googleplay' },
-                { name: 'App Gallery', url: 'https://cdn.simpleicons.org/huawei' },
-                { name: 'Redis', url: 'https://cdn.simpleicons.org/redis' },
-                { name: 'Linux', url: 'https://cdn.simpleicons.org/linux' }
-              ].map((tech, i) => (
-                <div key={i} className="flex-1 flex items-center justify-center px-4 md:px-8">
-                  <div className="flex flex-col items-center gap-3 group">
-                    <div className="w-16 h-16 md:w-20 md:h-20 bg-white border border-gray-200 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-all group-hover:-translate-y-1">
-                      <img src={tech.url} alt={tech.name} className="w-8 h-8 md:w-10 md:h-10 object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* Visual - Technology Grid */}
+        <div className="w-full max-w-5xl mx-auto my-12">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            {[
+              { name: 'Java', url: 'https://cdn.simpleicons.org/java/666666' },
+              { name: 'Spring', url: 'https://cdn.simpleicons.org/spring/666666' },
+              { name: 'JavaScript', url: 'https://cdn.simpleicons.org/javascript/666666' },
+              { name: 'Node.js', url: 'https://cdn.simpleicons.org/nodedotjs/666666' },
+              { name: 'TypeScript', url: 'https://cdn.simpleicons.org/typescript/666666' },
+              { name: 'React', url: 'https://cdn.simpleicons.org/react/666666' },
+              { name: 'Next.js', url: 'https://cdn.simpleicons.org/nextdotjs/666666' },
+              { name: 'Python', url: 'https://cdn.simpleicons.org/python/666666' },
+              { name: 'PostgreSQL', url: 'https://cdn.simpleicons.org/postgresql/666666' },
+              { name: 'AWS', url: 'https://cdn.simpleicons.org/amazonaws/666666' },
+              { name: 'Terraform', url: 'https://cdn.simpleicons.org/terraform/666666' },
+              { name: 'Docker', url: 'https://cdn.simpleicons.org/docker/666666' },
+              { name: 'Kubernetes', url: 'https://cdn.simpleicons.org/kubernetes/666666' },
+              { name: 'App Store', url: 'https://cdn.simpleicons.org/apple/666666' },
+              { name: 'Play Store', url: 'https://cdn.simpleicons.org/googleplay/666666' },
+              { name: 'App Gallery', url: 'https://cdn.simpleicons.org/huawei/666666' },
+              { name: 'Redis', url: 'https://cdn.simpleicons.org/redis/666666' },
+              { name: 'Linux', url: 'https://cdn.simpleicons.org/linux/666666' }
+            ].map((tech, i) => (
+              <div key={i} className="flex flex-col items-center justify-center p-4 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 w-24 h-24 md:w-28 md:h-28 group">
+                <img 
+                  src={tech.url} 
+                  alt={tech.name} 
+                  className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-70 group-hover:opacity-100 transition-opacity" 
+                />
+                <span className="text-[10px] md:text-xs text-gray-500 mt-2 font-medium group-hover:text-gray-900 transition-colors text-center leading-tight">
+                  {tech.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 

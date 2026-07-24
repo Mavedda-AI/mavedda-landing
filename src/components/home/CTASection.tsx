@@ -38,7 +38,7 @@ export const CTASection = () => {
           </p>
           
           <div className="mt-4">
-            <Link href="/demo" className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-black bg-white rounded-full hover:bg-gray-100 hover:scale-105 transition-all">
+            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-black bg-white rounded-full hover:bg-gray-100 hover:scale-105 transition-all">
               {t('cta.button')}
             </Link>
           </div>

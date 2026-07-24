@@ -147,8 +147,8 @@ export const Header = () => {
 
         {/* CTA Button */}
         <div className="hidden lg:flex items-center">
-          <Link href="/demo" className="bg-[#2d3136] hover:bg-black text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all">
-            Let&#39;s connect
+          <Link href="/contact" className="hidden lg:inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-black rounded-full hover:bg-gray-800 transition-colors">
+            Let&#39;s Connect
           </Link>
         </div>
 
@@ -174,9 +174,9 @@ export const Header = () => {
           <Link href="#" className="font-medium text-gray-800">Resources</Link>
           <Link href="#" className="font-medium text-gray-800">Company</Link>
           <Link href="/security" className="font-medium text-gray-800">Security</Link>
-          <Link href="/demo" className="bg-[#2d3136] text-white text-center py-3 rounded-full font-semibold mt-2">
-            Let&#39;s connect
-          </Link>
+            <Link href="/contact" className="block w-full px-5 py-3 text-center text-sm font-semibold text-white bg-black rounded-full mt-4">
+              Let&#39;s Connect
+            </Link>
         </div>
       )}
     </header>
