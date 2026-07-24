@@ -126,27 +126,31 @@ export const FloatingControls = () => {
           </div>
         </div>
 
-        {/* Cookie Button */}
-        <button 
-          onClick={() => setIsCookieOpen(true)}
-          className="bg-[#1a1a1a] text-white p-4 rounded-r-2xl shadow-lg hover:bg-[#2a2a2a] transition-all flex items-center justify-center relative overflow-hidden group border border-l-0 border-white/10 z-10"
-          title="Cookie Preferences"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:scale-110 transition-transform">
-            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
-            <path d="M8.5 8.5v.01"></path>
-            <path d="M16 12.5v.01"></path>
-            <path d="M12 16v.01"></path>
-            <path d="M11 11v.01"></path>
-            <path d="M7 14v.01"></path>
-          </svg>
-          
-          {/* Status Dot */}
-          {hasConsented !== null && (
-            <div className={`absolute top-2 right-2 w-2 h-2 rounded-full ${hasConsented ? 'bg-green-500' : 'bg-red-500'}`}></div>
-          )}
-        </button>
+
       </div>
+
+      {/* Bottom Cookie Banner */}
+      {hasConsented === null && !isCookieOpen && (
+        <div className="fixed bottom-0 left-0 w-full bg-[#111] border-t border-[#333] text-white p-4 md:p-6 z-[90] flex flex-col md:flex-row items-center justify-between gap-4 animate-in slide-in-from-bottom duration-500">
+          <div className="text-sm text-gray-400 max-w-4xl text-center md:text-left leading-relaxed">
+            We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking &quot;Accept All&quot;, you consent to our use of cookies. Read our <a href="/privacy" className="text-white hover:underline font-medium">Privacy Policy</a> to learn more.
+          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto flex-shrink-0">
+            <button 
+              onClick={() => setIsCookieOpen(true)}
+              className="w-full sm:w-auto px-4 py-2.5 text-sm font-medium text-gray-300 hover:text-white transition-colors underline underline-offset-4"
+            >
+              Details
+            </button>
+            <button 
+              onClick={handleCookieAccept}
+              className="w-full sm:w-auto bg-white text-black hover:bg-gray-200 px-6 py-2.5 rounded-lg text-sm font-semibold transition-colors"
+            >
+              Accept All
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* GDPR Cookie Consent Modal */}
       {isCookieOpen && (

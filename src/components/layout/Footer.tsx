@@ -23,9 +23,9 @@ export const Footer = () => {
           <div className="md:col-span-12 lg:col-span-4 flex flex-col gap-6 lg:pr-24">
             <Link href="/" className="inline-block">
               <img 
-                src="/assets/logo/logo_mavedda.svg" 
+                src="/assets/logo/logo-mavedda.png" 
                 alt="Mavedda" 
-                className="h-20 object-contain brightness-0 invert" 
+                className="h-24 object-contain brightness-0 invert" 
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">

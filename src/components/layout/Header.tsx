@@ -84,6 +84,8 @@ export const Header = () => {
         <span>{t('announcement.text')}</span>
         <a 
           href="https://salutbabe.com/download" 
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-1 hover:text-gray-300 transition-colors"
         >
           <span className="underline decoration-1 underline-offset-4">{t('announcement.button')}</span>
@@ -98,7 +100,7 @@ export const Header = () => {
         {/* Logo */}
         <div className="flex-shrink-0 flex items-center">
           <Link href="/">
-            <img src="/assets/logo/logo_mavedda.svg" alt="Mavedda Logo" className="h-9 w-auto" />
+            <img src="/assets/logo/logo-mavedda.png" alt="Mavedda Logo" className="h-16 w-auto" />
           </Link>
         </div>
 
