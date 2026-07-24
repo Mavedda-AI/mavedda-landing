@@ -5,7 +5,7 @@ import Link from 'next/link';
 import {useTranslation} from '@/hooks/useTranslation';
 
 export const Header = () => {
-  const { t } = useTranslation();
+  const { t, language, setLanguage } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -151,11 +151,12 @@ export const Header = () => {
           <div className="relative group">
             <button className="flex items-center gap-1.5 text-sm font-semibold text-gray-600 hover:text-black transition-colors uppercase">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              EN
+              {language.toUpperCase()}
             </button>
             <div className="absolute right-0 top-full mt-2 w-32 bg-white shadow-lg rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-              <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">English</button>
-              <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Türkçe</button>
+              <button onClick={() => setLanguage('en')} className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${language === 'en' ? 'text-black font-semibold bg-gray-50' : 'text-gray-700'}`}>English</button>
+              <button onClick={() => setLanguage('tr')} className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${language === 'tr' ? 'text-black font-semibold bg-gray-50' : 'text-gray-700'}`}>Türkçe</button>
+              <button onClick={() => setLanguage('de')} className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${language === 'de' ? 'text-black font-semibold bg-gray-50' : 'text-gray-700'}`}>Deutsch</button>
             </div>
           </div>
 
